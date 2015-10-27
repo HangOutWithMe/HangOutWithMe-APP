@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,42 +19,29 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Riven-1" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-5M-sES">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-KN-M9k">
-                                <rect key="frame" x="0.0" y="170" width="600" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-KN-M9k">
+                                <rect key="frame" x="0.0" y="214" width="600" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="439-7r-Dg9"/>
-                                    <constraint firstAttribute="height" constant="30" id="Kvs-7U-WRE"/>
+                                    <constraint firstAttribute="height" constant="30" id="oRd-Ca-0vY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clY-yN-ynC">
-                                <rect key="frame" x="0.0" y="208" width="600" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clY-yN-ynC">
+                                <rect key="frame" x="0.0" y="252" width="600" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="MRc-Gn-As6"/>
-                                    <constraint firstAttribute="height" constant="30" id="vW7-Ly-ePv"/>
+                                    <constraint firstAttribute="height" constant="30" id="8my-bk-MRa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpQ-Xp-usg">
-                                <rect key="frame" x="145" y="294" width="310" height="30"/>
-                                <color key="backgroundColor" red="0.21895375580000001" green="0.29985724139999997" blue="0.67651120580000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Log in with FaceBook">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Fs-7q-AKD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're New?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5X-Bq-1cY">
                                 <rect key="frame" x="253" y="505" width="95" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="HdU-DJ-eCr"/>
+                                    <constraint firstAttribute="height" constant="20" id="I3s-GN-mpU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,17 +50,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2z-nB-hh4">
                                 <rect key="frame" x="265" y="533" width="70" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="JUy-09-WMo"/>
+                                    <constraint firstAttribute="width" constant="70" id="kZh-wf-kim"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="SignUp!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRV-17-461">
-                                <rect key="frame" x="145" y="256" width="310" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRV-17-461">
+                                <rect key="frame" x="145" y="300" width="310" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="n0J-zj-Kla"/>
+                                    <constraint firstAttribute="width" constant="310" id="ENb-9e-jLt"/>
                                 </constraints>
                                 <color key="tintColor" red="0.83003866790000003" green="0.20799601949999999" blue="0.18806256469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Log In">
@@ -84,28 +70,44 @@
                                     <segue destination="yp2-VZ-w3z" kind="show" identifier="Fool" id="BWV-dP-Pap"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpQ-Xp-usg">
+                                <rect key="frame" x="145" y="338" width="310" height="30"/>
+                                <color key="backgroundColor" red="0.83003866790000003" green="0.20799601949999999" blue="0.18806256469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uHK-8N-Xdu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-90" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" title="Log in with FaceBook" image="facebook">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Fs-7q-AKD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B2z-nB-hh4" firstAttribute="top" secondItem="f5X-Bq-1cY" secondAttribute="bottom" constant="8" symbolic="YES" id="76I-RG-f1c"/>
-                            <constraint firstAttribute="trailing" secondItem="hDj-5M-sES" secondAttribute="trailing" id="8RR-k0-yGh"/>
-                            <constraint firstItem="hDj-5M-sES" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9So-iR-dra"/>
-                            <constraint firstItem="KRV-17-461" firstAttribute="trailing" secondItem="RpQ-Xp-usg" secondAttribute="trailing" id="AYg-JZ-tQt"/>
-                            <constraint firstItem="KRV-17-461" firstAttribute="top" secondItem="clY-yN-ynC" secondAttribute="bottom" constant="18" id="Ewf-Qj-CuI"/>
-                            <constraint firstItem="clY-yN-ynC" firstAttribute="top" secondItem="iWw-KN-M9k" secondAttribute="bottom" constant="8" symbolic="YES" id="FCl-WM-hhb"/>
-                            <constraint firstAttribute="bottom" secondItem="f5X-Bq-1cY" secondAttribute="bottom" constant="75" id="I1H-wi-s6g"/>
-                            <constraint firstItem="iWw-KN-M9k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="IEU-Wa-3RY"/>
-                            <constraint firstItem="B2z-nB-hh4" firstAttribute="centerX" secondItem="f5X-Bq-1cY" secondAttribute="centerX" id="KsW-q0-vg5"/>
-                            <constraint firstItem="clY-yN-ynC" firstAttribute="leading" secondItem="iWw-KN-M9k" secondAttribute="leading" id="Sbt-jZ-z6v"/>
-                            <constraint firstItem="f5X-Bq-1cY" firstAttribute="centerX" secondItem="RpQ-Xp-usg" secondAttribute="centerX" id="aM8-4M-Um2"/>
-                            <constraint firstItem="KRV-17-461" firstAttribute="centerX" secondItem="clY-yN-ynC" secondAttribute="centerX" id="b1w-b4-jVV"/>
-                            <constraint firstAttribute="trailing" secondItem="clY-yN-ynC" secondAttribute="trailing" id="caM-ui-tTd"/>
-                            <constraint firstItem="hDj-5M-sES" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="epL-MS-iat"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="hDj-5M-sES" secondAttribute="bottom" id="hNk-RR-Md7"/>
-                            <constraint firstItem="KRV-17-461" firstAttribute="leading" secondItem="RpQ-Xp-usg" secondAttribute="leading" id="ke8-Su-k2Z"/>
-                            <constraint firstItem="RpQ-Xp-usg" firstAttribute="top" secondItem="KRV-17-461" secondAttribute="bottom" constant="8" symbolic="YES" id="lKM-Iv-sNk"/>
-                            <constraint firstItem="clY-yN-ynC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rtX-sd-dfX"/>
-                            <constraint firstItem="clY-yN-ynC" firstAttribute="trailing" secondItem="iWw-KN-M9k" secondAttribute="trailing" id="wUc-wy-k1V"/>
+                            <constraint firstItem="hDj-5M-sES" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Gx-sZ-USv"/>
+                            <constraint firstItem="hDj-5M-sES" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2dP-sI-9CV"/>
+                            <constraint firstItem="f5X-Bq-1cY" firstAttribute="centerX" secondItem="B2z-nB-hh4" secondAttribute="centerX" id="57q-ds-cX1"/>
+                            <constraint firstItem="KRV-17-461" firstAttribute="trailing" secondItem="RpQ-Xp-usg" secondAttribute="trailing" id="6Ly-WX-TvI"/>
+                            <constraint firstItem="KRV-17-461" firstAttribute="leading" secondItem="RpQ-Xp-usg" secondAttribute="leading" id="8Nr-SR-7I9"/>
+                            <constraint firstItem="clY-yN-ynC" firstAttribute="centerX" secondItem="KRV-17-461" secondAttribute="centerX" id="Bq7-vz-m0R"/>
+                            <constraint firstItem="clY-yN-ynC" firstAttribute="trailing" secondItem="hDj-5M-sES" secondAttribute="trailing" id="HcS-Q0-lmM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B2z-nB-hh4" secondAttribute="bottom" constant="37" id="RjF-5b-CmA"/>
+                            <constraint firstItem="iWw-KN-M9k" firstAttribute="leading" secondItem="clY-yN-ynC" secondAttribute="leading" id="Rlm-pZ-mAv"/>
+                            <constraint firstAttribute="trailing" secondItem="hDj-5M-sES" secondAttribute="trailing" id="UDs-4k-jcL"/>
+                            <constraint firstItem="B2z-nB-hh4" firstAttribute="top" secondItem="f5X-Bq-1cY" secondAttribute="bottom" constant="8" symbolic="YES" id="a6q-1b-6Ix"/>
+                            <constraint firstItem="RpQ-Xp-usg" firstAttribute="centerX" secondItem="f5X-Bq-1cY" secondAttribute="centerX" id="gFR-Xe-sch"/>
+                            <constraint firstItem="clY-yN-ynC" firstAttribute="top" secondItem="iWw-KN-M9k" secondAttribute="bottom" constant="8" symbolic="YES" id="gbf-KK-eUa"/>
+                            <constraint firstItem="RpQ-Xp-usg" firstAttribute="top" secondItem="KRV-17-461" secondAttribute="bottom" constant="8" symbolic="YES" id="gfj-NC-FGe"/>
+                            <constraint firstItem="iWw-KN-M9k" firstAttribute="trailing" secondItem="clY-yN-ynC" secondAttribute="trailing" id="j9g-w3-Kh4"/>
+                            <constraint firstItem="clY-yN-ynC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="js2-5h-xlO"/>
+                            <constraint firstItem="hDj-5M-sES" firstAttribute="leading" secondItem="clY-yN-ynC" secondAttribute="leading" id="lgS-lg-4pf"/>
+                            <constraint firstItem="iWw-KN-M9k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="oBh-lv-HdS"/>
+                            <constraint firstItem="KRV-17-461" firstAttribute="top" secondItem="clY-yN-ynC" secondAttribute="bottom" constant="18" id="oDD-WV-D4y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -176,5 +178,6 @@
     </scenes>
     <resources>
         <image name="Riven-1" width="640" height="1136"/>
+        <image name="facebook" width="45" height="45"/>
     </resources>
 </document>

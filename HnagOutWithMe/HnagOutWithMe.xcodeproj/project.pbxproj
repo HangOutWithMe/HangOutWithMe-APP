@@ -167,8 +167,6 @@
 				EC2FB4041BDF5D6F00BE4982 /* CFNetwork.framework */,
 				EC2FB4001BDF5D6500BE4982 /* Accounts.framework */,
 				EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */,
-				EC2FB41E1BDF6EA700BE4982 /* FacebookSDK */,
-				EC2FB41F1BDF6F1B00BE4982 /* ParseSDK */,
 			);
 			path = HnagOutWithMe;
 			sourceTree = "<group>";
@@ -180,20 +178,6 @@
 				EC2FB3E51BDF01B800BE4982 /* Info.plist */,
 			);
 			path = HnagOutWithMeTests;
-			sourceTree = "<group>";
-		};
-		EC2FB41E1BDF6EA700BE4982 /* FacebookSDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FacebookSDK;
-			sourceTree = "<group>";
-		};
-		EC2FB41F1BDF6F1B00BE4982 /* ParseSDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ParseSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

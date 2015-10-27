@@ -32,8 +32,12 @@ class ViewController: UIViewController {
         loginButton.alpha   = 0;
         //imageView.image = UIImage(named: "img1.jpg")
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
+       // let buttonImage = UIImage(named: "facebook") as UIImage?
+       // fbLoginButton=UIButton(frame:CGRectMake(100, 50, 50, 150))
 
-
+       // fbLoginButton?.setImage(buttonImage, forState:.Normal)
+         fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        //fbLoginButton?.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 20)
         UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.usernameField.alpha = 1.0
             self.passwordField.alpha = 1.0
