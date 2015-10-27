@@ -12,6 +12,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var fbLoginButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameField: UITextField!
     
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
         passwordField.alpha = 0;
         loginButton.alpha   = 0;
         //imageView.image = UIImage(named: "img1.jpg")
+        fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
+
 
         UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.usernameField.alpha = 1.0

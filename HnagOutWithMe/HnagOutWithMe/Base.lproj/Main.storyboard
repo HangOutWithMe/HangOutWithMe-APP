@@ -109,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fbLoginButton" destination="RpQ-Xp-usg" id="nP0-LI-g9N"/>
                         <outlet property="imageView" destination="hDj-5M-sES" id="UGt-wI-0lV"/>
                         <outlet property="loginButton" destination="KRV-17-461" id="1OL-9r-WGa"/>
                         <outlet property="passwordField" destination="clY-yN-ynC" id="6Ic-w3-vDE"/>
