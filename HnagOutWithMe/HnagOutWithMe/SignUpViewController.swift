@@ -21,13 +21,21 @@ class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    /**
+    When sign up button in login page is pressed, navigate to sign up page, and sign up user to parse.
+    email, username, and password is required to sign up.
+    */
     @IBAction func signUp(sender: AnyObject) {
         parseEmail = email.text!
         parseUserName = userName.text!
         parsePassWord = passWord.text!
         self.myMethod()
         
+        
     }
+    /**
+    Cancel button when user wants to cancel this action, then navigate to login page.
+    */
     @IBAction func cancelToLogInPage(sender: AnyObject) {
         let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -38,21 +46,40 @@ class SignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /**
+    sign up user to parse and perform some error checking like missing information.
+    */
     func myMethod() {
         var user = PFUser()
         user.username = parseUserName
         user.password = parsePassWord
         user.email = parseEmail
-        // other fields can be set just like with PFObject
-        //user["phone"] = "415-392-0202"
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
-            if let error = error {
-                let errorString = error.userInfo["error"] as? NSString
-                // Show the errorString somewhere and let the user try again.
-            } else {
-                // Hooray! Let them use the app now.
+            if(self.parseEmail == "self." || self.parsePassWord == "" || self.parseUserName == ""){
+                var myAlert = UIAlertController(title:"Alert!", message:"Please fill out all needed information!", preferredStyle: UIAlertControllerStyle.Alert);
+                let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                myAlert.addAction(okAction);
+                self.presentViewController(myAlert, animated:true, completion:nil);
+            }else{
+                if let error = error {
+                    _ = error.userInfo["error"] as? NSString
+                    let myAlert = UIAlertController(title:"Alert!", message:error.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
+                    let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    myAlert.addAction(okAction);
+                    self.presentViewController(myAlert, animated:true, completion:nil);
+              
+                } else {
+                    var myAlert = UIAlertController(title:"Congratulation!", message:"You've signed Up!", preferredStyle: UIAlertControllerStyle.Alert);
+                    let okAction =  UIAlertAction(title: "Go to App", style: UIAlertActionStyle.Default, handler: nil)
+                    myAlert.addAction(okAction);
+                    self.presentViewController(myAlert, animated:true, completion:nil);
+                    let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
+                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = contentPage
+               
+                }
             }
         }
     }

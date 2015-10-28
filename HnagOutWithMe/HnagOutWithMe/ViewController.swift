@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var fbLoginButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
    
     
@@ -28,12 +26,13 @@ class ViewController: UIViewController {
     //MARK: View Controller LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameField.alpha = 0;
-        passwordField.alpha = 0;
-        loginButton.alpha   = 0;
+        usernameField.alpha = 0
+        passwordField.alpha = 0
+        loginButton.alpha   = 0
+        
+        //Setting fbloginButton to fb blue
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
-
-         fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.usernameField.alpha = 1.0
             self.passwordField.alpha = 1.0
@@ -44,15 +43,43 @@ class ViewController: UIViewController {
         usernameField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         
-        
         self.loginButton(false)
         
     }
-    
+    /**
+    @param username
+    @param userpassword
+    Mark: Authenticate user when they perform a log in. If success, navigate to app main content page,
+    otherwise alert message displayed, and stay in login page.
+    */
+    @IBAction func logInAction(sender: AnyObject) {
+        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
+            (user: PFUser?, signupError: NSError?) -> Void in
+        
+            if signupError == nil {
+                // Do stuff after successful login.
+               // println("logged in")
+                let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.window?.rootViewController = contentPage
+                
+            } else {
+                var myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
+                let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                myAlert.addAction(okAction);
+                self.presentViewController(myAlert, animated:true, completion:nil);
+            }
+
+    }
+}
+
+    //Mark
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+    /**
+    update newly registered user to parse
+    */
     func updateUserInfoToParse() {
         
         var requestParameters = ["fields": "id, email, first_name, last_name"]
@@ -131,6 +158,9 @@ class ViewController: UIViewController {
         }
         
     }
+    /**
+    When user pressesd facebook login button, perform this transaction and display alert if error occured.
+    */
     @IBAction func facebookLogin(sender: AnyObject) {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"], block: { (user:PFUser?, error:NSError?) -> Void in
             
@@ -152,19 +182,14 @@ class ViewController: UIViewController {
                 self.performSegueWithIdentifier("Fool", sender: self)
 
                 
-//                let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
-//                
-//                let protectedPageNav = UINavigationController(rootViewController: protectedPage)
-//                
-//                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//                
-//                appDelegate.window?.rootViewController = protectedPageNav
-                
             }
         })
         
     }
     
+    /**
+    Enable log in button when both username and password field have some sort of value.
+    */
     func loginButton(enabled: Bool) -> () {
         func enable(){
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -180,24 +205,15 @@ class ViewController: UIViewController {
         }
         return enabled ? enable() : disable()
     }
-    
-//    func changeImage(){
-//        if idx == backGroundArray.count-1{
-//            idx = 0
-//        }
-//        else{
-//            idx++
-//        }
-//        let toImage = backGroundArray[idx];
-//        UIView.transitionWithView(self.imageView, duration: 3, options: .TransitionCrossDissolve, animations: {self.imageView.image = toImage}, completion: nil)
-//        
-//    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    
+    /**
+    Detect if textfield has some input
+    */
     func textFieldDidChange() {
         if usernameField.text!.isEmpty || passwordField.text!.isEmpty
         {
@@ -208,14 +224,6 @@ class ViewController: UIViewController {
             self.loginButton(true)
         }
     }
-
-    @IBAction func buttonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("login", sender: self)
-    }
-    
-    @IBAction func signupPressed(sender: AnyObject) {
-    }
-    
     
     @IBAction func backgroundPressed(sender: AnyObject) {
         usernameField.resignFirstResponder()
