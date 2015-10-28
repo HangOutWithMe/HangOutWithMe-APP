@@ -163,7 +163,6 @@ class ViewController: UIViewController {
     */
     @IBAction func facebookLogin(sender: AnyObject) {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"], block: { (user:PFUser?, error:NSError?) -> Void in
-            
             if(error != nil)
             {
                 //Display an alert message
@@ -224,11 +223,12 @@ class ViewController: UIViewController {
             self.loginButton(true)
         }
     }
-    
-    @IBAction func backgroundPressed(sender: AnyObject) {
-        usernameField.resignFirstResponder()
-        passwordField.resignFirstResponder()
-        
+    /**
+    Dismiss keyboard when touch on screen
+    */
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
   
 }
