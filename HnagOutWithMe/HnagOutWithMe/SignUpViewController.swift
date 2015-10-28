@@ -28,6 +28,11 @@ class SignUpViewController: UIViewController {
         self.myMethod()
         
     }
+    @IBAction func cancelToLogInPage(sender: AnyObject) {
+        let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.rootViewController = logInPage
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
