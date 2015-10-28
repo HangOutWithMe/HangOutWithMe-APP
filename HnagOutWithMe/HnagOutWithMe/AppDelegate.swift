@@ -18,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("zLQGc0JhT4Oy963KK4xGnO1TBaB29AOp0ZljhDPd", clientKey: "frICfc22qPeSTe9MH5aFA1XTIDHfuWlUaXhUVTf2")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        let currentUser = PFUser.currentUser()
+        if (currentUser != nil ) {
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("Exit") 
+            self.window?.rootViewController = initialViewController
+            
+        }
+        else{
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("LogIn") 
+            self.window?.rootViewController = initialViewController
+
+            }
+
+       
         return true
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {

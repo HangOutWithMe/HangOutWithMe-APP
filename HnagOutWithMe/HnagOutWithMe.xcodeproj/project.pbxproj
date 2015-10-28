@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17D443FAFF57FF05312FA96D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED92D7B992490422F334BF /* libPods.a */; };
+		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */; };
 		EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3D01BDF01B800BE4982 /* ViewController.swift */; };
 		EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2FB3D21BDF01B800BE4982 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A6ED92D7B992490422F334BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
+		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC2FB3CB1BDF01B800BE4982 /* HnagOutWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HnagOutWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2FB3D01BDF01B800BE4982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */,
+				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
+				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
+				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
 				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
 				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
 				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
@@ -317,8 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
+				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
+				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,13 +463,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/HnagOutWithMe/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -469,13 +484,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/HnagOutWithMe/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

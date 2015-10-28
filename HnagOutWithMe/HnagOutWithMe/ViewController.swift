@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
+   
     
     //MARK: Global Variables for Changing Image Functionality.
    // private var idx: Int = 0
@@ -30,14 +31,9 @@ class ViewController: UIViewController {
         usernameField.alpha = 0;
         passwordField.alpha = 0;
         loginButton.alpha   = 0;
-        //imageView.image = UIImage(named: "img1.jpg")
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
-       // let buttonImage = UIImage(named: "facebook") as UIImage?
-       // fbLoginButton=UIButton(frame:CGRectMake(100, 50, 50, 150))
 
-       // fbLoginButton?.setImage(buttonImage, forState:.Normal)
          fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        //fbLoginButton?.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 20)
         UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.usernameField.alpha = 1.0
             self.passwordField.alpha = 1.0
@@ -49,10 +45,15 @@ class ViewController: UIViewController {
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         
         
-        // Visual Effect View for background
-
+        self.loginButton(false)
         
-//        NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: "changeImage", userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func updateUserInfoToParse() {
         
         var requestParameters = ["fields": "id, email, first_name, last_name"]
         
@@ -118,7 +119,7 @@ class ViewController: UIViewController {
                         
                         if(success)
                         {
-                           print("User details are now updated")
+                            print("User details are now updated")
                         }
                         
                     })
@@ -129,11 +130,7 @@ class ViewController: UIViewController {
             
         }
         
-        self.loginButton(false)
-        
     }
-    
-    
     @IBAction func facebookLogin(sender: AnyObject) {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"], block: { (user:PFUser?, error:NSError?) -> Void in
             
@@ -150,7 +147,10 @@ class ViewController: UIViewController {
                 return
             }
             if(FBSDKAccessToken.currentAccessToken() != nil)
-            {   self.performSegueWithIdentifier("Fool", sender: self)
+                
+            {   self.updateUserInfoToParse()
+                self.performSegueWithIdentifier("Fool", sender: self)
+
                 
 //                let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
 //                
