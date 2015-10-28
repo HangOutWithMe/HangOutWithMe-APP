@@ -21,13 +21,12 @@ class ExitViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //For testing. Whne logout button is pressed, navigate to login page.
     @IBAction func LogOut(sender: AnyObject) {
         PFUser.logOutInBackgroundWithBlock{(error: NSError?) -> Void in
             let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.window?.rootViewController = logInPage
-            
             
         }
        
