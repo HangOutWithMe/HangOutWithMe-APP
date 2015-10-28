@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
     sign up user to parse and perform some error checking like missing information.
     */
     func myMethod() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = parseUserName
         user.password = parsePassWord
         user.email = parseEmail
@@ -58,7 +58,7 @@ class SignUpViewController: UIViewController {
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if(self.parseEmail == "self." || self.parsePassWord == "" || self.parseUserName == ""){
-                var myAlert = UIAlertController(title:"Alert!", message:"Please fill out all needed information!", preferredStyle: UIAlertControllerStyle.Alert);
+                let myAlert = UIAlertController(title:"Alert!", message:"Please fill out all needed information!", preferredStyle: UIAlertControllerStyle.Alert);
                 let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                 myAlert.addAction(okAction);
                 self.presentViewController(myAlert, animated:true, completion:nil);
@@ -71,7 +71,7 @@ class SignUpViewController: UIViewController {
                     self.presentViewController(myAlert, animated:true, completion:nil);
               
                 } else {
-                    var myAlert = UIAlertController(title:"Congratulation!", message:"You've signed Up!", preferredStyle: UIAlertControllerStyle.Alert);
+                    let myAlert = UIAlertController(title:"Congratulation!", message:"You've signed Up!", preferredStyle: UIAlertControllerStyle.Alert);
                     let okAction =  UIAlertAction(title: "Go to App", style: UIAlertActionStyle.Default, handler: nil)
                     myAlert.addAction(okAction);
                     self.presentViewController(myAlert, animated:true, completion:nil);

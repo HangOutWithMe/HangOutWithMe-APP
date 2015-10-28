@@ -64,7 +64,7 @@ class ViewController: UIViewController {
                 appDelegate.window?.rootViewController = contentPage
                 
             } else {
-                var myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
+                let myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
                 let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
                 myAlert.addAction(okAction);
                 self.presentViewController(myAlert, animated:true, completion:nil);
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     */
     func updateUserInfoToParse() {
         
-        var requestParameters = ["fields": "id, email, first_name, last_name"]
+        let requestParameters = ["fields": "id, email, first_name, last_name"]
         
         let userDetails = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
         
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                     
                     // Get Facebook profile picture
-                    var userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
+                    let userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
                     
                     let profilePictureUrl = NSURL(string: userProfile)
                     
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
             if(error != nil)
             {
                 //Display an alert message
-                var myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
+                let myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
                 
                 let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                 
