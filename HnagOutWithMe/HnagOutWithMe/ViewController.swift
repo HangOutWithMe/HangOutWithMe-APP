@@ -29,6 +29,15 @@ class ViewController: UIViewController {
         usernameField.alpha = 0
         passwordField.alpha = 0
         loginButton.alpha   = 0
+        //Add a boarder line to the bottom of usernamefield.
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0, y: usernameField.frame.size.height - width, width:  usernameField.frame.size.width, height: usernameField.frame.size.height)
+        border.borderWidth = width
+        usernameField.layer.addSublayer(border)
+        usernameField.layer.masksToBounds = true
+        
         
         //Setting fbloginButton to fb blue
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
@@ -76,6 +85,21 @@ class ViewController: UIViewController {
     //Mark
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        let imageView = UIImageView()
+        let image = UIImage(named: "User No Gender")
+        imageView.image = image
+        imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        view.addSubview(imageView)
+        usernameField.leftView = imageView
+        usernameField.leftViewMode = UITextFieldViewMode.Always
+        
+        let imageViewPassword = UIImageView()
+        let passwordImage = UIImage(named: "password")
+        imageViewPassword.image = passwordImage
+        imageViewPassword.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        view.addSubview(imageViewPassword)
+        passwordField.leftView = imageViewPassword
+        passwordField.leftViewMode = UITextFieldViewMode.Always
     }
     /**
     update newly registered user to parse
