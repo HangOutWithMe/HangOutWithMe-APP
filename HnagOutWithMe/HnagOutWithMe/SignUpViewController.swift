@@ -18,8 +18,24 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // add boarder to username textfield
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        //border.borderColor = UIColor.Color().CGColor
+        border.frame = CGRect(x: 0, y: userName.frame.size.height - width, width:  userName.frame.size.width, height: userName.frame.size.height)
+        border.borderWidth = width
+        userName.layer.addSublayer(border)
+        userName.layer.masksToBounds = true
+        // add boarder to password textfield
+        let passwordBorder = CALayer()
+        let passwordWidth = CGFloat(2.0)
+        //passwordBorder.borderColor = UIColor.blackColor().CGColor
+        passwordBorder.frame = CGRect(x: 0, y: passWord.frame.size.height - width, width:  passWord.frame.size.width, height: passWord.frame.size.height)
+        passwordBorder.borderWidth = passwordWidth
+        passWord.layer.addSublayer(passwordBorder)
+        passWord.layer.masksToBounds = true
+        //add boarder to textfield at the bottom
+    // super.viewDidLoad()
     }
     /**
     When sign up button in login page is pressed, navigate to sign up page, and sign up user to parse.
@@ -91,6 +107,8 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
+    
+
 
     /*
     // MARK: - Navigation
