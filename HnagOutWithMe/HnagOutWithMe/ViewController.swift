@@ -71,12 +71,16 @@ class ViewController: UIViewController {
                 let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 appDelegate.window?.rootViewController = contentPage
+                self.view.endEditing(true)
+
                 
             } else {
                 let myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
                 let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
                 myAlert.addAction(okAction);
                 self.presentViewController(myAlert, animated:true, completion:nil);
+                self.view.endEditing(true)
+
             }
 
     }

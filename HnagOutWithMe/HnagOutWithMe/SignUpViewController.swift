@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
         parseUserName = userName.text!
         parsePassWord = passWord.text!
         self.myMethod()
+        view.endEditing(true)
         
         
     }
@@ -82,6 +83,13 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
+    }
+    /**
+    Dismiss keyboard when touch on screen
+    */
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
 
     /*
