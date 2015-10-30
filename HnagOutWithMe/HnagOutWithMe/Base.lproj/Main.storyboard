@@ -20,7 +20,7 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Riven-1" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-5M-sES">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-KN-M9k">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-KN-M9k">
                                 <rect key="frame" x="0.0" y="214" width="600" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -139,35 +139,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="9kB-5f-RjY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="9kB-5f-RjY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvW-ss-2TL">
-                                <rect key="frame" x="0.0" y="140" width="600" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="P8A-Jj-hyt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQg-Rz-PBI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQg-Rz-PBI" userLabel="email">
                                 <rect key="frame" x="0.0" y="189" width="600" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fy7-nX-ksE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-Oa-7bM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-Oa-7bM" userLabel="password">
                                 <rect key="frame" x="0.0" y="238" width="600" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nlD-Pi-7Vg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlj-nC-hFN">
                                 <rect key="frame" x="116" y="411" width="369" height="30"/>
@@ -177,7 +168,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.83003866790000003" green="0.20799601949999999" blue="0.18806256469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="2pt-3H-Hna" eventType="touchUpInside" id="Wx0-el-DLF"/>
@@ -190,15 +181,12 @@
                             <constraint firstItem="CQg-Rz-PBI" firstAttribute="top" secondItem="y09-3z-yvI" secondAttribute="bottom" constant="125" id="A2I-JF-qzk"/>
                             <constraint firstItem="9kB-5f-RjY" firstAttribute="trailing" secondItem="CQg-Rz-PBI" secondAttribute="trailing" id="B2y-MI-ZNX"/>
                             <constraint firstItem="wlj-nC-hFN" firstAttribute="centerX" secondItem="DqR-Oa-7bM" secondAttribute="centerX" id="LUu-05-eHX"/>
+                            <constraint firstItem="DqR-Oa-7bM" firstAttribute="top" secondItem="y09-3z-yvI" secondAttribute="bottom" constant="174" id="Oe4-xI-m1d"/>
                             <constraint firstItem="rUu-ez-Iu9" firstAttribute="top" secondItem="wlj-nC-hFN" secondAttribute="bottom" constant="159" id="RuD-SR-vvG"/>
-                            <constraint firstItem="wvW-ss-2TL" firstAttribute="trailing" secondItem="CQg-Rz-PBI" secondAttribute="trailing" id="SWc-sd-pp5"/>
-                            <constraint firstItem="wvW-ss-2TL" firstAttribute="leading" secondItem="CQg-Rz-PBI" secondAttribute="leading" id="Wgm-o2-vXi"/>
                             <constraint firstAttribute="trailing" secondItem="9kB-5f-RjY" secondAttribute="trailing" id="cWo-tI-vhR"/>
-                            <constraint firstItem="wvW-ss-2TL" firstAttribute="leading" secondItem="9kB-5f-RjY" secondAttribute="leading" id="crg-Ab-ScI"/>
+                            <constraint firstItem="DqR-Oa-7bM" firstAttribute="leading" secondItem="9kB-5f-RjY" secondAttribute="leading" id="e5D-VN-c8E"/>
                             <constraint firstItem="wlj-nC-hFN" firstAttribute="leading" secondItem="uuT-j4-LPA" secondAttribute="leadingMargin" constant="96" id="eyq-Rb-yUK"/>
-                            <constraint firstItem="DqR-Oa-7bM" firstAttribute="top" secondItem="wvW-ss-2TL" secondAttribute="bottom" constant="48" id="hFI-1h-Qp5"/>
                             <constraint firstItem="9kB-5f-RjY" firstAttribute="top" secondItem="uuT-j4-LPA" secondAttribute="top" id="jlU-QS-thH"/>
-                            <constraint firstItem="wvW-ss-2TL" firstAttribute="top" secondItem="y09-3z-yvI" secondAttribute="bottom" constant="76" id="odI-JP-gku"/>
                             <constraint firstItem="DqR-Oa-7bM" firstAttribute="leading" secondItem="uuT-j4-LPA" secondAttribute="leading" id="oxc-qJ-app"/>
                             <constraint firstItem="CQg-Rz-PBI" firstAttribute="trailing" secondItem="DqR-Oa-7bM" secondAttribute="trailing" id="r3M-Tg-KDA"/>
                             <constraint firstItem="9kB-5f-RjY" firstAttribute="bottom" secondItem="rUu-ez-Iu9" secondAttribute="top" id="xOw-D6-ycJ"/>
@@ -212,9 +200,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="email" destination="DqR-Oa-7bM" id="M1v-wg-x8q"/>
-                        <outlet property="passWord" destination="CQg-Rz-PBI" id="Bjz-VZ-VXw"/>
-                        <outlet property="userName" destination="wvW-ss-2TL" id="jfR-73-QoW"/>
+                        <outlet property="email" destination="CQg-Rz-PBI" id="xUf-D9-zWJ"/>
+                        <outlet property="passWord" destination="DqR-Oa-7bM" id="RwH-JX-anX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKv-Rc-dhL" userLabel="First Responder" sceneMemberID="firstResponder"/>

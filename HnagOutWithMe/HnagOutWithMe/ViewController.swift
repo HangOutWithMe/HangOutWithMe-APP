@@ -64,22 +64,37 @@ class ViewController: UIViewController {
     @IBAction func logInAction(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
             (user: PFUser?, signupError: NSError?) -> Void in
-        
+        //if user is authenticated
             if signupError == nil {
-                // Do stuff after successful login.
-               // println("logged in")
-                let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
-                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.window?.rootViewController = contentPage
-                self.view.endEditing(true)
+                // Check that the user has verified their email address
+                if user?.objectForKey("emailVerified") as! Bool == true {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        appDelegate.window?.rootViewController = contentPage
+                        self.view.endEditing(true)
 
-                
-            } else {
-                let myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
+                    }
+                }
+                    //if email not verified
+
+                else {
+                    let myAlert = UIAlertController(title:"Email verification ", message:"Please verify your email first!", preferredStyle: UIAlertControllerStyle.Alert);
+                    let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    myAlert.addAction(okAction);
+                    self.presentViewController(myAlert, animated:true, completion:nil);
+                    self.view.endEditing(true)
+                    PFUser.logOut()
+                    
+                }
+            
+            } else { // if user is  not authenticated
+                let myAlert = UIAlertController(title:"Error", message:"invalid login information", preferredStyle: UIAlertControllerStyle.Alert);
                 let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
                 myAlert.addAction(okAction);
                 self.presentViewController(myAlert, animated:true, completion:nil);
                 self.view.endEditing(true)
+                PFUser.logOut()
 
             }
 
