@@ -58,7 +58,12 @@ class SignUpViewController: UIViewController {
             UIAlertAction in
             let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.window?.rootViewController = logInPage
+            logInPage.modalTransitionStyle = .FlipHorizontal
+            self.presentViewController(logInPage, animated: true, completion: nil)
+
+            
+            self.view.endEditing(true)
+
         }
         
         // Add the actions

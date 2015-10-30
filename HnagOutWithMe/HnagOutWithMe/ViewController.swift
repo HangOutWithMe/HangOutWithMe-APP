@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-   
+    //default users
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     
     //MARK: Global Variables for Changing Image Functionality.
    // private var idx: Int = 0
@@ -36,9 +38,6 @@ class ViewController: UIViewController {
         border.frame = CGRect(x: 0, y: usernameField.frame.size.height - width, width:  usernameField.frame.size.width, height: usernameField.frame.size.height)
         border.borderWidth = width
         usernameField.layer.addSublayer(border)
-        usernameField.layer.masksToBounds = true
-        
-        
         //Setting fbloginButton to fb blue
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
         fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
@@ -71,8 +70,10 @@ class ViewController: UIViewController {
                     dispatch_async(dispatch_get_main_queue()) {
                         let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
                         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                        appDelegate.window?.rootViewController = contentPage
+                        contentPage.modalTransitionStyle = .FlipHorizontal
+                        self.presentViewController(contentPage, animated: true, completion: nil)
                         self.view.endEditing(true)
+                        self.defaults.setValue(self.usernameField.text, forKey: "lastUser")
 
                     }
                 }
@@ -111,7 +112,6 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         usernameField.leftView = imageView
         usernameField.leftViewMode = UITextFieldViewMode.Always
-        
         let imageViewPassword = UIImageView()
         let passwordImage = UIImage(named: "password")
         imageViewPassword.image = passwordImage
@@ -119,7 +119,10 @@ class ViewController: UIViewController {
         view.addSubview(imageViewPassword)
         passwordField.leftView = imageViewPassword
         passwordField.leftViewMode = UITextFieldViewMode.Always
-    }
+        if(usernameField.text == "") {
+            usernameField.text = defaults.stringForKey("lastUser")
+        }
+        }
     /**
     update newly registered user to parse
     */
