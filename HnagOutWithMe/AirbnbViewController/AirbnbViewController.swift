@@ -197,10 +197,14 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
         let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipeOnAirImageView:")
         swipe.direction = UISwipeGestureRecognizerDirection.Left
         self.airImageView?.addGestureRecognizer(swipe)
-        
+         //var sessionView: AirbnbSessionView? = self.sessionViews![1]
+        //sessionView!.addGestureRecognizer(swipe)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapOnAirImageView:")
         self.airImageView?.addGestureRecognizer(tap)
-        
+//        let tap1: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapOnAirImageView:")
+//        var sessionView: AirbnbSessionView? = self.sessionViews![0]
+//        sessionView?.addGestureRecognizer(tap1)
+//        
         self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handleRevealGesture:")
         self.panGestureRecognizer?.delegate = self
         self.leftView?.addGestureRecognizer(panGestureRecognizer!)
@@ -460,7 +464,6 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
         }
         
         self.session = self.dataSource?.numberOfSession()
-        
         if let heightForAirMenuRow = self.delegate?.heightForAirMenuRow?() {
             self.heightAirMenuRow = heightForAirMenuRow
         }
@@ -496,11 +499,11 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
             }
             let sesionTitle: String? = self.dataSource?.titleForHeaderAtSession(i)
             sessionView?.button?.setTitle(sesionTitle, forState: UIControlState.Normal)
+           
         }
         
         for var i:Int = 0; i < self.session; i++ {
             let sessionView: AirbnbSessionView? = sessionViews![i]!
-
             for view in sessionView!.containView!.subviews {
                 view.removeFromSuperview()
             }
@@ -522,10 +525,17 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
                 button!.titleLabel!.font = UIFont(name: "HelveticaNeue-Light", size: 16)
                 button!.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
                 let y: CGFloat = CGFloat(firstTop) + CGFloat(self.heightAirMenuRow!) * CGFloat(j)
-                button!.frame = CGRectMake(0, y, 200, CGFloat(self.heightAirMenuRow!))
+                button!.frame = CGRectMake(0, y, 50, CGFloat(self.heightAirMenuRow!))
                 button!.tag = j
+                
                 sessionView!.containView!.tag = i
-                sessionView?.containView?.addSubview(button!)
+//                sessionView?.containView?.addSubview(button!)
+//                let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: sessionView, action: "handleSwipeOnAirImageView:")
+//                swipe.direction = UISwipeGestureRecognizerDirection.Left
+//                sessionView?.containView?.addGestureRecognizer(swipe)
+
+                
+                
             }
         }
         self.layoutContaintView()

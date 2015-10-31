@@ -28,21 +28,29 @@ class menuViewController: AirbnbViewController {
     }
     
     override func titleForRowAtIndexPath(indexPath: NSIndexPath) -> String {
-        return "Row \(indexPath.row) in \(indexPath.section)"
+        if(indexPath.row == 0) {
+            return "Yolo"
+        }
+        if(indexPath.row == 1) {
+            return "Help"
+        }
+        if(indexPath.row == 2) {
+            return "Setting"
+        }
+        return ""
     }
     
     override func titleForHeaderAtSession(session: Int) -> String {
-        return "Session \(session)"
+        return "Yolo"
     }
     
     func viewControllerForIndexPath(indexPath: NSIndexPath) -> UIViewController {
-     //   let viewController: userMainPageViewController = userMainPageViewController()
         let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
         let viewController = storyboard.instantiateViewControllerWithIdentifier("userMainView") as! userMainPageViewController
         let controller: UINavigationController = UINavigationController(rootViewController: viewController)
         
         switch indexPath.row {
-        case 0: break
+        case 0:break
            // viewController.view.backgroundColor = UIColor(red:0.13, green:0.14, blue:0.15, alpha:0)
         case 1: break
            // viewController.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:0)
