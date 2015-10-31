@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import SystemConfiguration
 
 
 
@@ -17,7 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-   
+    //default users
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     
     //MARK: Global Variables for Changing Image Functionality.
    // private var idx: Int = 0
@@ -29,7 +33,13 @@ class ViewController: UIViewController {
         usernameField.alpha = 0
         passwordField.alpha = 0
         loginButton.alpha   = 0
-        
+        //Add a boarder line to the bottom of usernamefield.
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0, y: usernameField.frame.size.height - width, width:  usernameField.frame.size.width, height: usernameField.frame.size.height)
+        border.borderWidth = width
+        usernameField.layer.addSublayer(border)
         //Setting fbloginButton to fb blue
         fbLoginButton.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
         fbLoginButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
@@ -42,7 +52,8 @@ class ViewController: UIViewController {
         // Notifiying for Changes in the textFields
         usernameField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
-        
+        loginButton.layer.borderWidth = 0.5
+        loginButton.layer.borderColor = UIColor.grayColor().CGColor
         self.loginButton(false)
         
     }
@@ -53,36 +64,85 @@ class ViewController: UIViewController {
     otherwise alert message displayed, and stay in login page.
     */
     @IBAction func logInAction(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
-            (user: PFUser?, signupError: NSError?) -> Void in
-        
-            if signupError == nil {
-                // Do stuff after successful login.
-               // println("logged in")
-                let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
-                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.window?.rootViewController = contentPage
+        if(isConnectedToNetwork()){
+            PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
+                (user: PFUser?, signupError: NSError?) -> Void in
+                //if user is authenticated
+                if signupError == nil {
+                    // Check that the user has verified their email address
+                    if user?.objectForKey("emailVerified") as! Bool == true {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
+                            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            contentPage.modalTransitionStyle = .FlipHorizontal
+                            self.presentViewController(contentPage, animated: true, completion: nil)
+                            self.view.endEditing(true)
+                            self.defaults.setValue(self.usernameField.text, forKey: "lastUser")
+                            
+                        }
+                    }
+                        //if email not verified
+                        
+                    else {
+                        let myAlert = UIAlertController(title:"Email verification ", message:"Please verify your email first!", preferredStyle: UIAlertControllerStyle.Alert);
+                        let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                        myAlert.addAction(okAction);
+                        self.presentViewController(myAlert, animated:true, completion:nil);
+                        self.view.endEditing(true)
+                        PFUser.logOut()
+                        
+                    }
+                    
+                } else { // if user is  not authenticated
+                    let myAlert = UIAlertController(title:"Error", message:"invalid login information", preferredStyle: UIAlertControllerStyle.Alert);
+                    let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    myAlert.addAction(okAction);
+                    self.presentViewController(myAlert, animated:true, completion:nil);
+                    self.view.endEditing(true)
+                    PFUser.logOut()
+                    
+                }
                 
-            } else {
-                var myAlert = UIAlertController(title:"Error", message:"Invalid Log In!", preferredStyle: UIAlertControllerStyle.Alert);
-                let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-                myAlert.addAction(okAction);
-                self.presentViewController(myAlert, animated:true, completion:nil);
             }
+        }else {
+            //Display an alert message
+            let myAlert = UIAlertController(title:"Error", message:"Please Connect to Internet", preferredStyle: UIAlertControllerStyle.Alert);
+            
+            let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            myAlert.addAction(okAction);
+            self.presentViewController(myAlert, animated:true, completion:nil);
+
+        }
 
     }
-}
 
     //Mark
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-    }
+        let imageView = UIImageView()
+        let image = UIImage(named: "User No Gender")
+        imageView.image = image
+        imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        view.addSubview(imageView)
+        usernameField.leftView = imageView
+        usernameField.leftViewMode = UITextFieldViewMode.Always
+        let imageViewPassword = UIImageView()
+        let passwordImage = UIImage(named: "password")
+        imageViewPassword.image = passwordImage
+        imageViewPassword.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        view.addSubview(imageViewPassword)
+        passwordField.leftView = imageViewPassword
+        passwordField.leftViewMode = UITextFieldViewMode.Always
+        if(usernameField.text == "") {
+            usernameField.text = defaults.stringForKey("lastUser")
+        }
+        }
     /**
     update newly registered user to parse
     */
     func updateUserInfoToParse() {
         
-        var requestParameters = ["fields": "id, email, first_name, last_name"]
+        let requestParameters = ["fields": "id, email, first_name, last_name"]
         
         let userDetails = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
         
@@ -129,7 +189,7 @@ class ViewController: UIViewController {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                     
                     // Get Facebook profile picture
-                    var userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
+                    let userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
                     
                     let profilePictureUrl = NSURL(string: userProfile)
                     
@@ -163,11 +223,10 @@ class ViewController: UIViewController {
     */
     @IBAction func facebookLogin(sender: AnyObject) {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"], block: { (user:PFUser?, error:NSError?) -> Void in
-            
             if(error != nil)
             {
                 //Display an alert message
-                var myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
+                let myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert);
                 
                 let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                 
@@ -224,14 +283,34 @@ class ViewController: UIViewController {
             self.loginButton(true)
         }
     }
-    
-    @IBAction func backgroundPressed(sender: AnyObject) {
-        usernameField.resignFirstResponder()
-        passwordField.resignFirstResponder()
-        
+    /**
+    Dismiss keyboard when touch on screen
+    */
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    /**
+    check internet connection
+    */
+    func isConnectedToNetwork() -> Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+        }
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
     }
   
 }
+
 
 //Extension for Color to take Hex Values
 extension UIColor{
