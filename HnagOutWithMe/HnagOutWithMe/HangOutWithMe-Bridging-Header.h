@@ -11,4 +11,5 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Parse/parse.h"
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <AirbnbHelper.h>
 #endif /* HangOutWithMe_Bridging_Header_h */

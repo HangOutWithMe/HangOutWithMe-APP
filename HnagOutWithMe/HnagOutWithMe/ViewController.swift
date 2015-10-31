@@ -72,10 +72,8 @@ class ViewController: UIViewController {
                     // Check that the user has verified their email address
                     if user?.objectForKey("emailVerified") as! Bool == true {
                         dispatch_async(dispatch_get_main_queue()) {
-                            let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
-                            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                            contentPage.modalTransitionStyle = .FlipHorizontal
-                            self.presentViewController(contentPage, animated: true, completion: nil)
+                            // if log in successful, transit to main view.
+                            self.presentMainPageView()
                             self.view.endEditing(true)
                             self.defaults.setValue(self.usernameField.text, forKey: "lastUser")
                             
@@ -238,10 +236,14 @@ class ViewController: UIViewController {
             if(FBSDKAccessToken.currentAccessToken() != nil)
                 
             {   self.updateUserInfoToParse()
-                self.performSegueWithIdentifier("Fool", sender: self)
+                //self.performSegueWithIdentifier("Fool", sender: self)
 
                 
             }
+            // if log in successful, transit to main view.
+           self.presentMainPageView()
+            
+
         })
         
     }
@@ -289,6 +291,16 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
+    }
+    
+    func presentMainPageView(){
+        let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
+        let contentPage = storyboard.instantiateViewControllerWithIdentifier("userMainView") as! userMainPageViewController
+        let navigationController = UINavigationController(rootViewController: contentPage)
+        let menuController: menuViewController = menuViewController(viewController: navigationController, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        self.presentViewController(menuController, animated: true, completion: nil)
+
     }
     /**
     check internet connection

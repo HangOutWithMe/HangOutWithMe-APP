@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17D443FAFF57FF05312FA96D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED92D7B992490422F334BF /* libPods.a */; };
+		A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
 		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +30,12 @@
 		EC2FB4711BDF86B500BE4982 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */; };
 		EC2FB4751BDF872300BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */; };
 		EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */; settings = {ASSET_TAGS = (); }; };
+		ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */; settings = {ASSET_TAGS = (); }; };
+		ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */; settings = {ASSET_TAGS = (); }; };
+		ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D00B4DA02712B3822682FD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A6ED92D7B992490422F334BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +65,7 @@
 		EC2FB3E31BDF01B800BE4982 /* HnagOutWithMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HnagOutWithMeTests.swift; sourceTree = "<group>"; };
 		EC2FB3E51BDF01B800BE4982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2FB4001BDF5D6500BE4982 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		EC2FB4041BDF5D6F00BE4982 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EC2FB4061BDF5D7800BE4982 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EC2FB4081BDF5D8100BE4982 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -69,12 +75,19 @@
 		EC2FB4101BDF5DA900BE4982 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EC2FB4141BDF5DBA00BE4982 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HangOutWithMe-Bridging-Header.h"; path = "../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h"; sourceTree = DEVELOPER_DIR; };
 		EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		EC2FB46F1BDF868D00BE4982 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EC2FB4721BDF86DE00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		ECBD888E1BE4C00A003925BA /* AirbnbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirbnbHelper.h; sourceTree = "<group>"; };
+		ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirbnbHelper.m; sourceTree = "<group>"; };
+		ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbSessionView.swift; sourceTree = "<group>"; };
+		ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbViewController.swift; sourceTree = "<group>"; };
+		ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = userMainPage.storyboard; sourceTree = "<group>"; };
+		ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userMainPageViewController.swift; sourceTree = "<group>"; };
+		ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		F321D9E22FECB15CA46C90CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +109,7 @@
 				EC2FB4051BDF5D6F00BE4982 /* CFNetwork.framework in Frameworks */,
 				EC2FB4021BDF5D6500BE4982 /* Accounts.framework in Frameworks */,
 				EC2FB4031BDF5D6500BE4982 /* AudioToolbox.framework in Frameworks */,
-				17D443FAFF57FF05312FA96D /* libPods.a in Frameworks */,
+				A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +129,7 @@
 				EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */,
 				EC2FB46F1BDF868D00BE4982 /* libz.tbd */,
 				EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */,
-				A6ED92D7B992490422F334BF /* libPods.a */,
+				3D00B4DA02712B3822682FD0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,11 +166,15 @@
 		EC2FB3CD1BDF01B800BE4982 /* HnagOutWithMe */ = {
 			isa = PBXGroup;
 			children = (
+				ECBD888D1BE4C00A003925BA /* AirbnbViewController */,
 				EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */,
+				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
+				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
+				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
 				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
 				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
 				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
-				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
 				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
 				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
 				EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */,
@@ -188,6 +205,18 @@
 			);
 			path = HnagOutWithMeTests;
 			sourceTree = "<group>";
+		};
+		ECBD888D1BE4C00A003925BA /* AirbnbViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD888E1BE4C00A003925BA /* AirbnbHelper.h */,
+				ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */,
+				ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */,
+				ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */,
+			);
+			name = AirbnbViewController;
+			path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/../../../../../../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/AirbnbViewController;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -276,6 +305,7 @@
 				EC2FB3D91BDF01B800BE4982 /* LaunchScreen.storyboard in Resources */,
 				EC2FB3D61BDF01B800BE4982 /* Assets.xcassets in Resources */,
 				EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */,
+				ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,9 +358,14 @@
 			files = (
 				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
 				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
+				ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */,
+				ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */,
+				ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
 				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
+				ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */,
+				ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LogIn" id="BYZ-38-t0r" customClass="ViewController" customModule="HnagOutWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="BYZ-38-t0r" customClass="ViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -79,7 +79,6 @@
                                 </state>
                                 <connections>
                                     <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Fs-7q-AKD"/>
-                                    <segue destination="JLt-jC-XPZ" kind="show" identifier="Fool" id="gYu-qB-tKj"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clY-yN-ynC">
@@ -130,7 +129,7 @@
         <!--SignUpView-->
         <scene sceneID="JZH-kO-pHb">
             <objects>
-                <viewController storyboardIdentifier="SignUp" title="SignUpView" id="2pt-3H-Hna" customClass="SignUpViewController" customModule="HnagOutWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" title="SignUpView" id="2pt-3H-Hna" customClass="SignUpViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y09-3z-yvI"/>
                         <viewControllerLayoutGuide type="bottom" id="rUu-ez-Iu9"/>
@@ -212,7 +211,7 @@
         <!--Exit View Controller-->
         <scene sceneID="rMs-eQ-mAI">
             <objects>
-                <viewController storyboardIdentifier="Exit" id="JLt-jC-XPZ" customClass="ExitViewController" customModule="HnagOutWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Exit" id="JLt-jC-XPZ" customClass="ExitViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d1g-x6-HGj"/>
                         <viewControllerLayoutGuide type="bottom" id="Vz8-sw-Ama"/>
