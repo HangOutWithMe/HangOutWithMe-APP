@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import SystemConfiguration
 
 
 
@@ -50,7 +52,8 @@ class ViewController: UIViewController {
         // Notifiying for Changes in the textFields
         usernameField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
-        
+        loginButton.layer.borderWidth = 0.5
+        loginButton.layer.borderColor = UIColor.grayColor().CGColor
         self.loginButton(false)
         
     }
@@ -61,26 +64,37 @@ class ViewController: UIViewController {
     otherwise alert message displayed, and stay in login page.
     */
     @IBAction func logInAction(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
-            (user: PFUser?, signupError: NSError?) -> Void in
-        //if user is authenticated
-            if signupError == nil {
-                // Check that the user has verified their email address
-                if user?.objectForKey("emailVerified") as! Bool == true {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
-                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                        contentPage.modalTransitionStyle = .FlipHorizontal
-                        self.presentViewController(contentPage, animated: true, completion: nil)
-                        self.view.endEditing(true)
-                        self.defaults.setValue(self.usernameField.text, forKey: "lastUser")
-
+        if(isConnectedToNetwork()){
+            PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
+                (user: PFUser?, signupError: NSError?) -> Void in
+                //if user is authenticated
+                if signupError == nil {
+                    // Check that the user has verified their email address
+                    if user?.objectForKey("emailVerified") as! Bool == true {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            let contentPage = self.storyboard?.instantiateViewControllerWithIdentifier("Exit") as! ExitViewController
+                            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            contentPage.modalTransitionStyle = .FlipHorizontal
+                            self.presentViewController(contentPage, animated: true, completion: nil)
+                            self.view.endEditing(true)
+                            self.defaults.setValue(self.usernameField.text, forKey: "lastUser")
+                            
+                        }
                     }
-                }
-                    //if email not verified
-
-                else {
-                    let myAlert = UIAlertController(title:"Email verification ", message:"Please verify your email first!", preferredStyle: UIAlertControllerStyle.Alert);
+                        //if email not verified
+                        
+                    else {
+                        let myAlert = UIAlertController(title:"Email verification ", message:"Please verify your email first!", preferredStyle: UIAlertControllerStyle.Alert);
+                        let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                        myAlert.addAction(okAction);
+                        self.presentViewController(myAlert, animated:true, completion:nil);
+                        self.view.endEditing(true)
+                        PFUser.logOut()
+                        
+                    }
+                    
+                } else { // if user is  not authenticated
+                    let myAlert = UIAlertController(title:"Error", message:"invalid login information", preferredStyle: UIAlertControllerStyle.Alert);
                     let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
                     myAlert.addAction(okAction);
                     self.presentViewController(myAlert, animated:true, completion:nil);
@@ -88,19 +102,19 @@ class ViewController: UIViewController {
                     PFUser.logOut()
                     
                 }
-            
-            } else { // if user is  not authenticated
-                let myAlert = UIAlertController(title:"Error", message:"invalid login information", preferredStyle: UIAlertControllerStyle.Alert);
-                let okAction =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-                myAlert.addAction(okAction);
-                self.presentViewController(myAlert, animated:true, completion:nil);
-                self.view.endEditing(true)
-                PFUser.logOut()
-
+                
             }
+        }else {
+            //Display an alert message
+            let myAlert = UIAlertController(title:"Error", message:"Please Connect to Internet", preferredStyle: UIAlertControllerStyle.Alert);
+            
+            let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            myAlert.addAction(okAction);
+            self.presentViewController(myAlert, animated:true, completion:nil);
+
+        }
 
     }
-}
 
     //Mark
     override func viewWillAppear(animated: Bool) {
@@ -276,8 +290,27 @@ class ViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
+    /**
+    check internet connection
+    */
+    func isConnectedToNetwork() -> Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+        }
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
   
 }
+
 
 //Extension for Color to take Hex Values
 extension UIColor{
