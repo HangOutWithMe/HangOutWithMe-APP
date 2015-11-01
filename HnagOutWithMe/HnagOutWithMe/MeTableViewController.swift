@@ -9,6 +9,15 @@
 import UIKit
 
 class MeTableViewController: UITableViewController {
+    
+    @IBAction func Logout(sender: AnyObject) {
+        PFUser.logOutInBackgroundWithBlock{(error: NSError?) -> Void in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let logInPage = storyboard.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.window?.rootViewController = logInPage
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +34,15 @@ class MeTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         self.navigationController?.navigationBarHidden = false
         self.tabBarController?.navigationItem.title = "Me"
-        var refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action:"refreshFunc")
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action:"refreshFunc")
         self.tabBarController?.navigationItem.rightBarButtonItem = refreshButton
     }
 
     func refreshFunc() {
       let vc = (self.storyboard?.instantiateViewControllerWithIdentifier("testing"))! as UIViewController
       self.navigationController?.pushViewController(vc, animated: true)
-     
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -34,15 +34,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u0U-Ix-qL4">
-                            <rect key="frame" x="0.0" y="72" width="600" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="Logout:" destination="FXg-yj-YKb" eventType="touchUpInside" id="Wfe-P3-tU2"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pux-Lv-GwE">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -101,22 +92,12 @@
         <!--Contacts-->
         <scene sceneID="JSd-S8-7UV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PeL-41-Y52" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="6Fv-CP-Kmi" customClass="ContactTableViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="POx-Te-bw8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eJi-mg-Xw4">
-                            <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <segue destination="jpq-ja-HuH" kind="show" id="AN7-e5-8pt"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jQp-On-xMe">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -141,8 +122,43 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeL-41-Y52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000" y="1233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pvt-bd-0Lh">
+            <objects>
+                <viewController storyboardIdentifier="addFriends" id="Wlm-Og-DWt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UCb-tq-CtS"/>
+                        <viewControllerLayoutGuide type="bottom" id="wsb-Nb-QnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uFy-AY-SMu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHX-Zy-Jfh">
+                                <rect key="frame" x="252" y="92" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="IKe-WD-WFP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mHX-Zy-Jfh" firstAttribute="top" secondItem="UCb-tq-CtS" secondAttribute="bottom" constant="72" id="4yv-Z9-Z6V"/>
+                            <constraint firstItem="mHX-Zy-Jfh" firstAttribute="centerX" secondItem="uFy-AY-SMu" secondAttribute="centerX" id="L9b-2k-2CK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Go-KK-IET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="1227"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hsz-gz-K5T">
@@ -161,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdM-LJ-Fax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="1233"/>
+            <point key="canvasLocation" x="698" y="2801"/>
         </scene>
         <!--Me-->
         <scene sceneID="Oas-Tw-A1P">
@@ -172,6 +188,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xhh-Bn-riS">
+                            <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="Logout:" destination="yOQ-0Y-Rgx" eventType="touchUpInside" id="2ns-69-QSx"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ii6-Fg-EyZ">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>

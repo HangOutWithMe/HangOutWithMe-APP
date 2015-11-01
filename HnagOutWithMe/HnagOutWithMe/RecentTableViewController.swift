@@ -10,15 +10,6 @@ import UIKit
 
 class RecentTableViewController: UITableViewController {
 
-    @IBAction func Logout(sender: AnyObject) {
-        PFUser.logOutInBackgroundWithBlock{(error: NSError?) -> Void in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let logInPage = storyboard.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.window?.rootViewController = logInPage
-            
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()

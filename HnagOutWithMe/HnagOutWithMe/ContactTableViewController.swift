@@ -10,15 +10,7 @@ import UIKit
 
 class ContactTableViewController: UITableViewController {
 
-//    @IBAction func Logout(sender: AnyObject) {
-//        PFUser.logOutInBackgroundWithBlock{(error: NSError?) -> Void in
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let logInPage = storyboard.instantiateViewControllerWithIdentifier("LogIn") as! ViewController
-//            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//            appDelegate.window?.rootViewController = logInPage
-//            
-//        }
-//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()
@@ -29,7 +21,13 @@ class ContactTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         self.navigationController?.navigationBarHidden = false
         self.tabBarController?.navigationItem.title = "Contact"
-        self.tabBarController?.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addFunc")
+        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    func addFunc() {
+        let addPage = (self.storyboard?.instantiateViewControllerWithIdentifier("addFriends"))! as UIViewController
+        self.navigationController?.pushViewController(addPage, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
