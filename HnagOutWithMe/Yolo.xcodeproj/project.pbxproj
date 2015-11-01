@@ -10,6 +10,11 @@
 		A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
 		D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */; };
 		D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */; };
+		D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */; };
+		D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */; };
+		D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */; };
+		D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */; };
+		D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */; };
 		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
 		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
 		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
@@ -55,6 +60,11 @@
 		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewController.swift; sourceTree = "<group>"; };
 		D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewCell.swift; sourceTree = "<group>"; };
+		D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageTabBarController.swift; sourceTree = "<group>"; };
+		D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
 		D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +157,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D1BEC94B1BE5EAEB0081DDE3 /* UserMainPage */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
+				D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */,
+				D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */,
+				D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */,
+				D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */,
+				D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */,
+			);
+			name = UserMainPage;
+			sourceTree = "<group>";
+		};
 		EC2FB3C21BDF01B800BE4982 = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				ECBD888D1BE4C00A003925BA /* AirbnbViewController */,
-				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				D1BEC94B1BE5EAEB0081DDE3 /* UserMainPage */,
 				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
 				D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */,
 				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
-				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
 				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
 				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
 				D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */,
@@ -364,16 +387,21 @@
 			files = (
 				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
 				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
+				D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */,
 				ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */,
 				ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */,
 				ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */,
+				D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */,
+				D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
 				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
 				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,
+				D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */,
 				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
 				ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */,
 				ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */,
+				D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +543,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = Yolo;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -536,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = Yolo;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

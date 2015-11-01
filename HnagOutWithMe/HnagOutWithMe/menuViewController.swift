@@ -13,6 +13,11 @@ class menuViewController: AirbnbViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        let image = UIImage(named: "Riven-1")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        self.view.addSubview(imageView)
+        
 
         // Do any additional setup after loading the view.
     }
