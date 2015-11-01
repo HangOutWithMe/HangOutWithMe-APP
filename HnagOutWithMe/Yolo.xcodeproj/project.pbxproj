@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
-		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */; };
+		D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */; };
+		D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */; };
+		D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */; };
+		D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */; };
+		D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */; };
+		D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */; };
+		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
+		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
+		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
 		EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */; };
 		EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3D01BDF01B800BE4982 /* ViewController.swift */; };
 		EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2FB3D21BDF01B800BE4982 /* Main.storyboard */; };
@@ -29,13 +36,13 @@
 		EC2FB4131BDF5DB300BE4982 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */; };
 		EC2FB4711BDF86B500BE4982 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */; };
 		EC2FB4751BDF872300BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */; };
-		EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */; settings = {ASSET_TAGS = (); }; };
-		ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */; settings = {ASSET_TAGS = (); }; };
-		ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */; settings = {ASSET_TAGS = (); }; };
-		ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */; settings = {ASSET_TAGS = (); }; };
-		ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */; };
+		ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */; };
+		ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */; };
+		ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */; };
+		ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */; };
+		ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */; };
+		ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,14 @@
 /* Begin PBXFileReference section */
 		3D00B4DA02712B3822682FD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewController.swift; sourceTree = "<group>"; };
+		D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewCell.swift; sourceTree = "<group>"; };
+		D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageTabBarController.swift; sourceTree = "<group>"; };
+		D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +90,6 @@
 		EC2FB4101BDF5DA900BE4982 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EC2FB4141BDF5DBA00BE4982 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HangOutWithMe-Bridging-Header.h"; path = "../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h"; sourceTree = DEVELOPER_DIR; };
 		EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		EC2FB46F1BDF868D00BE4982 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EC2FB4721BDF86DE00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
@@ -143,6 +157,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D1BEC94B1BE5EAEB0081DDE3 /* UserMainPage */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
+				D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */,
+				D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */,
+				D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */,
+				D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */,
+				D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */,
+			);
+			name = UserMainPage;
+			sourceTree = "<group>";
+		};
 		EC2FB3C21BDF01B800BE4982 = {
 			isa = PBXGroup;
 			children = (
@@ -167,13 +195,14 @@
 			isa = PBXGroup;
 			children = (
 				ECBD888D1BE4C00A003925BA /* AirbnbViewController */,
-				EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */,
-				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				D1BEC94B1BE5EAEB0081DDE3 /* UserMainPage */,
 				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
+				D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */,
 				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
-				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
 				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
 				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
+				D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */,
+				D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */,
 				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
 				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
 				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
@@ -215,8 +244,8 @@
 				ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */,
 			);
 			name = AirbnbViewController;
-			path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/../../../../../../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/AirbnbViewController;
-			sourceTree = "<absolute>";
+			path = ../AirbnbViewController;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -358,14 +387,21 @@
 			files = (
 				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
 				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
+				D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */,
 				ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */,
 				ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */,
 				ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */,
+				D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */,
+				D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
+				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
+				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,
+				D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */,
 				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
 				ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */,
 				ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */,
+				D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

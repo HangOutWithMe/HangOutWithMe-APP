@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (currentUser != nil ) {
             self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
             let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
-            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("userMainView")
+            //let initialViewController = storyboard.instantiateViewControllerWithIdentifier("userMainView")
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
             let navigationController = UINavigationController(rootViewController: initialViewController)
             let menuController: menuViewController = menuViewController(viewController: navigationController, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
             self.window!.rootViewController = menuController

@@ -145,7 +145,7 @@ class SignUpViewController: UIViewController {
                     } else {
                         // User needs to verify email address before continuing
                         let myAlert = UIAlertController(title: "Email verification",
-                            message: "We have sent you an email verification, please check your email to    activate your account.",
+                            message: "We have sent you an email verification, please check your email to activate your account.",
                             preferredStyle: UIAlertControllerStyle.Alert
                         )
                         myAlert.addAction(UIAlertAction(title: "OKAY",
