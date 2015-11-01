@@ -57,10 +57,10 @@ class FriendCircleTableViewController: UITableViewController {
 //        gameScore.setObject(1337, forKey: "score")
 //        gameScore.setObject("Sean Plott", forKey: "playerName")
 //        gameScore.saveInBackground()
-//        let a = [1,2,3]
-//        let recentQuery = PFObject(className: "Recent")
-//        recentQuery.setObject(a, forKey: "FriendPosts")
-//        recentQuery.saveInBackground()
+        let a = [1,2,3]
+        let recentQuery = PFObject(className: "Recent")
+        recentQuery.setObject(a, forKey: "FriendPosts")
+        recentQuery.saveInBackground()
         
     }
     
