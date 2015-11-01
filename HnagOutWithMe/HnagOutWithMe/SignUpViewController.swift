@@ -90,7 +90,6 @@ class SignUpViewController: UIViewController {
             self.view.endEditing(true)
 
         }
-        
         // Add the actions
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
