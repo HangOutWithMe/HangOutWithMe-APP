@@ -529,7 +529,7 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
                 button!.tag = j
                 
                 sessionView!.containView!.tag = i
-//                sessionView?.containView?.addSubview(button!)
+                sessionView?.containView?.addSubview(button!)
 //                let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: sessionView, action: "handleSwipeOnAirImageView:")
 //                swipe.direction = UISwipeGestureRecognizerDirection.Left
 //                sessionView?.containView?.addGestureRecognizer(swipe)
