@@ -26,10 +26,8 @@ class userMainPageViewController: UIViewController {
             return
         }
         
-
         // Do any additional setup after loading the view.
     }
- 
    
     func leftButtonTouch() {
         self.airViewController.showAirViewFromViewController(self.navigationController, complete: nil)
