@@ -480,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -501,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

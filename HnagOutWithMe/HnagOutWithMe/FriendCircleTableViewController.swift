@@ -7,7 +7,7 @@
 //
 
 
-//  TableViewContoller that will be displayed  when the app is launched with succesful logging in.
+//  TableViewContoller that will be displayed when the app is launched with succesful logging in.
 //  Contains most recent events of current user's friends
 
 import UIKit
@@ -57,10 +57,10 @@ class FriendCircleTableViewController: UITableViewController {
 //        gameScore.setObject(1337, forKey: "score")
 //        gameScore.setObject("Sean Plott", forKey: "playerName")
 //        gameScore.saveInBackground()
-//        let a = [1,2,3]
-//        let recentQuery = PFObject(className: "Recent")
-//        recentQuery.setObject(a, forKey: "FriendPosts")
-//        recentQuery.saveInBackground()
+        let a = [1,2,3]
+        let recentQuery = PFObject(className: "Recent")
+        recentQuery.setObject(a, forKey: "FriendPosts")
+        recentQuery.saveInBackground()
         
     }
     
