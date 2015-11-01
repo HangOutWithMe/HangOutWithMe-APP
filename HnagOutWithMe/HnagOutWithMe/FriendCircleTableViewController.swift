@@ -53,10 +53,10 @@ class FriendCircleTableViewController: UITableViewController {
         // addDescendingOrder(String key): 
         // sorts the results in descending order by the given key
         recentQuery.addDescendingOrder("postTime")
-//        var gameScore = PFObject(className: "GameScore")
-//        gameScore.setObject(1337, forKey: "score")
-//        gameScore.setObject("Sean Plott", forKey: "playerName")
-//        gameScore.saveInBackground()
+        var gameScore = PFObject(className: "GameScore")
+        gameScore.setObject(1337, forKey: "score")
+        gameScore.setObject("Sean Plott", forKey: "playerName")
+        gameScore.saveInBackground()
         let a = [1,2,3]
         let recentQuery = PFObject(className: "Recent")
         recentQuery.setObject(a, forKey: "FriendPosts")
