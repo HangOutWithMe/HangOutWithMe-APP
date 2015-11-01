@@ -243,6 +243,8 @@ class ViewController: UIViewController {
             // if log in successful, transit to main view.
            self.presentMainPageView()
             
+            
+            
 
         })
         
@@ -300,6 +302,8 @@ class ViewController: UIViewController {
         let menuController: menuViewController = menuViewController(viewController: navigationController, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.presentViewController(menuController, animated: true, completion: nil)
+       
+        
 
     }
     /**
