@@ -7,7 +7,7 @@
 //
 
 
-//  TableViewContoller that will be displayed  when the app is launched with succesful logging in.
+//  TableViewContoller that will be displayed when the app is launched with succesful logging in.
 //  Contains most recent events of current user's friends
 
 import UIKit
