@@ -9,10 +9,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("zLQGc0JhT4Oy963KK4xGnO1TBaB29AOp0ZljhDPd", clientKey: "frICfc22qPeSTe9MH5aFA1XTIDHfuWlUaXhUVTf2")
@@ -21,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let currentUser = PFUser.currentUser()
         if (currentUser != nil ) {
             self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("Exit") 
-            self.window?.rootViewController = initialViewController
+            let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("userMainView")
+            let navigationController = UINavigationController(rootViewController: initialViewController)
+            let menuController: menuViewController = menuViewController(viewController: navigationController, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+            self.window!.rootViewController = menuController
             
         }
         else{
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         return true
     }
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }

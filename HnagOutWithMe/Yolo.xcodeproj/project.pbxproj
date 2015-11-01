@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17D443FAFF57FF05312FA96D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED92D7B992490422F334BF /* libPods.a */; };
+		D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */; };
+		D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */; };
+		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
+		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
+		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
+		A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
+		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */; };
+		EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3D01BDF01B800BE4982 /* ViewController.swift */; };
+		EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2FB3D21BDF01B800BE4982 /* Main.storyboard */; };
+		EC2FB3D61BDF01B800BE4982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */; };
+		EC2FB3D91BDF01B800BE4982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2FB3D71BDF01B800BE4982 /* LaunchScreen.storyboard */; };
+		EC2FB3E41BDF01B800BE4982 /* HnagOutWithMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FB3E31BDF01B800BE4982 /* HnagOutWithMeTests.swift */; };
+		EC2FB4021BDF5D6500BE4982 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4001BDF5D6500BE4982 /* Accounts.framework */; };
+		EC2FB4031BDF5D6500BE4982 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */; };
+		EC2FB4051BDF5D6F00BE4982 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4041BDF5D6F00BE4982 /* CFNetwork.framework */; };
+		EC2FB4071BDF5D7800BE4982 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4061BDF5D7800BE4982 /* CoreGraphics.framework */; };
+		EC2FB4091BDF5D8100BE4982 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4081BDF5D8100BE4982 /* CoreLocation.framework */; };
+		EC2FB40B1BDF5D8D00BE4982 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB40A1BDF5D8D00BE4982 /* MobileCoreServices.framework */; };
+		EC2FB40D1BDF5D9700BE4982 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB40C1BDF5D9700BE4982 /* QuartzCore.framework */; };
+		EC2FB40F1BDF5DA000BE4982 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB40E1BDF5DA000BE4982 /* Security.framework */; };
+		EC2FB4111BDF5DA900BE4982 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4101BDF5DA900BE4982 /* Social.framework */; };
+		EC2FB4131BDF5DB300BE4982 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */; };
+		EC2FB4711BDF86B500BE4982 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */; };
+		EC2FB4751BDF872300BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */; };
+		EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */; };
+		EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */; settings = {ASSET_TAGS = (); }; };
+		ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */; settings = {ASSET_TAGS = (); }; };
+		ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */; settings = {ASSET_TAGS = (); }; };
+		ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC2FB3E01BDF01B800BE4982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC2FB3C31BDF01B800BE4982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC2FB3CA1BDF01B800BE4982;
+			remoteInfo = HnagOutWithMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D00B4DA02712B3822682FD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A6ED92D7B992490422F334BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewController.swift; sourceTree = "<group>"; };
+		D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewCell.swift; sourceTree = "<group>"; };
+		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
+		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EC2FB3CB1BDF01B800BE4982 /* Yolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC2FB3D01BDF01B800BE4982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC2FB3D31BDF01B800BE4982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC2FB3D81BDF01B800BE4982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC2FB3DA1BDF01B800BE4982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2FB3DF1BDF01B800BE4982 /* Yolo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Yolo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2FB3E31BDF01B800BE4982 /* HnagOutWithMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HnagOutWithMeTests.swift; sourceTree = "<group>"; };
+		EC2FB3E51BDF01B800BE4982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2FB4001BDF5D6500BE4982 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		EC2FB4041BDF5D6F00BE4982 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EC2FB4061BDF5D7800BE4982 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC2FB4081BDF5D8100BE4982 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EC2FB40A1BDF5D8D00BE4982 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EC2FB40C1BDF5D9700BE4982 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EC2FB40E1BDF5DA000BE4982 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EC2FB4101BDF5DA900BE4982 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EC2FB4141BDF5DBA00BE4982 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HangOutWithMe-Bridging-Header.h"; path = "../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h"; sourceTree = DEVELOPER_DIR; };
+		EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		EC2FB46F1BDF868D00BE4982 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EC2FB4721BDF86DE00BE4982 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		ECBD888E1BE4C00A003925BA /* AirbnbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirbnbHelper.h; sourceTree = "<group>"; };
+		ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirbnbHelper.m; sourceTree = "<group>"; };
+		ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbSessionView.swift; sourceTree = "<group>"; };
+		ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbViewController.swift; sourceTree = "<group>"; };
+		ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = userMainPage.storyboard; sourceTree = "<group>"; };
+		ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userMainPageViewController.swift; sourceTree = "<group>"; };
+		ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		F321D9E22FECB15CA46C90CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2FB3C81BDF01B800BE4982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2FB4751BDF872300BE4982 /* libsqlite3.dylib in Frameworks */,
+				EC2FB4711BDF86B500BE4982 /* libz.1.dylib in Frameworks */,
+				EC2FB4131BDF5DB300BE4982 /* StoreKit.framework in Frameworks */,
+				EC2FB4111BDF5DA900BE4982 /* Social.framework in Frameworks */,
+				EC2FB40F1BDF5DA000BE4982 /* Security.framework in Frameworks */,
+				EC2FB40D1BDF5D9700BE4982 /* QuartzCore.framework in Frameworks */,
+				EC2FB40B1BDF5D8D00BE4982 /* MobileCoreServices.framework in Frameworks */,
+				EC2FB4771BDF872900BE4982 /* libsqlite3.dylib in Frameworks */,
+				EC2FB4091BDF5D8100BE4982 /* CoreLocation.framework in Frameworks */,
+				EC2FB4071BDF5D7800BE4982 /* CoreGraphics.framework in Frameworks */,
+				EC2FB4051BDF5D6F00BE4982 /* CFNetwork.framework in Frameworks */,
+				EC2FB4021BDF5D6500BE4982 /* Accounts.framework in Frameworks */,
+				EC2FB4031BDF5D6500BE4982 /* AudioToolbox.framework in Frameworks */,
+				A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2FB3DC1BDF01B800BE4982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0696F267AC787438B12D2377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC2FB4741BDF872300BE4982 /* libsqlite3.dylib */,
+				EC2FB46F1BDF868D00BE4982 /* libz.tbd */,
+				EC2FB46D1BDF864F00BE4982 /* libz.1.dylib */,
+				3D00B4DA02712B3822682FD0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC7A40B5CF8E2221F96B617D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F321D9E22FECB15CA46C90CD /* Pods.debug.xcconfig */,
+				416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC2FB3C21BDF01B800BE4982 = {
+			isa = PBXGroup;
+			children = (
+				EC2FB3CD1BDF01B800BE4982 /* HnagOutWithMe */,
+				EC2FB3E21BDF01B800BE4982 /* HnagOutWithMeTests */,
+				EC2FB3CC1BDF01B800BE4982 /* Products */,
+				CC7A40B5CF8E2221F96B617D /* Pods */,
+				0696F267AC787438B12D2377 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2FB3CC1BDF01B800BE4982 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2FB3CB1BDF01B800BE4982 /* Yolo.app */,
+				EC2FB3DF1BDF01B800BE4982 /* Yolo.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2FB3CD1BDF01B800BE4982 /* HnagOutWithMe */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD888D1BE4C00A003925BA /* AirbnbViewController */,
+				EC2FB46C1BDF7B7500BE4982 /* HangOutWithMe-Bridging-Header.h */,
+				ECBD88AD1BE4C418003925BA /* userMainPageViewController.swift */,
+				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
+				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
+				ECBD88AB1BE4C31D003925BA /* userMainPage.storyboard */,
+				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
+				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
+				D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */,
+				D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */,
+				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
+				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
+				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
+				EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */,
+				EC2FB3D71BDF01B800BE4982 /* LaunchScreen.storyboard */,
+				EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */,
+				EC2FB4721BDF86DE00BE4982 /* libz.1.dylib */,
+				EC2FB3DA1BDF01B800BE4982 /* Info.plist */,
+				EC2FB4141BDF5DBA00BE4982 /* SystemConfiguration.framework */,
+				EC2FB4121BDF5DB300BE4982 /* StoreKit.framework */,
+				EC2FB4101BDF5DA900BE4982 /* Social.framework */,
+				EC2FB40E1BDF5DA000BE4982 /* Security.framework */,
+				EC2FB40C1BDF5D9700BE4982 /* QuartzCore.framework */,
+				EC2FB40A1BDF5D8D00BE4982 /* MobileCoreServices.framework */,
+				EC2FB4081BDF5D8100BE4982 /* CoreLocation.framework */,
+				EC2FB4061BDF5D7800BE4982 /* CoreGraphics.framework */,
+				EC2FB4041BDF5D6F00BE4982 /* CFNetwork.framework */,
+				EC2FB4001BDF5D6500BE4982 /* Accounts.framework */,
+				EC2FB4011BDF5D6500BE4982 /* AudioToolbox.framework */,
+			);
+			path = HnagOutWithMe;
+			sourceTree = "<group>";
+		};
+		EC2FB3E21BDF01B800BE4982 /* HnagOutWithMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC2FB3E31BDF01B800BE4982 /* HnagOutWithMeTests.swift */,
+				EC2FB3E51BDF01B800BE4982 /* Info.plist */,
+			);
+			path = HnagOutWithMeTests;
+			sourceTree = "<group>";
+		};
+		ECBD888D1BE4C00A003925BA /* AirbnbViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD888E1BE4C00A003925BA /* AirbnbHelper.h */,
+				ECBD888F1BE4C00A003925BA /* AirbnbHelper.m */,
+				ECBD88901BE4C00A003925BA /* AirbnbSessionView.swift */,
+				ECBD88911BE4C00A003925BA /* AirbnbViewController.swift */,
+			);
+			name = AirbnbViewController;
+			path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/../../../../../../../../../Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/AirbnbViewController;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2FB3CA1BDF01B800BE4982 /* Yolo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2FB3E81BDF01B800BE4982 /* Build configuration list for PBXNativeTarget "Yolo" */;
+			buildPhases = (
+				1BC8F36EE95D273370465137 /* Check Pods Manifest.lock */,
+				EC2FB3C71BDF01B800BE4982 /* Sources */,
+				EC2FB3C81BDF01B800BE4982 /* Frameworks */,
+				EC2FB3C91BDF01B800BE4982 /* Resources */,
+				39296255D5054CF294C74D78 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yolo;
+			productName = HnagOutWithMe;
+			productReference = EC2FB3CB1BDF01B800BE4982 /* Yolo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC2FB3DE1BDF01B800BE4982 /* YoloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2FB3EB1BDF01B800BE4982 /* Build configuration list for PBXNativeTarget "YoloTests" */;
+			buildPhases = (
+				EC2FB3DB1BDF01B800BE4982 /* Sources */,
+				EC2FB3DC1BDF01B800BE4982 /* Frameworks */,
+				EC2FB3DD1BDF01B800BE4982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC2FB3E11BDF01B800BE4982 /* PBXTargetDependency */,
+			);
+			name = YoloTests;
+			productName = HnagOutWithMeTests;
+			productReference = EC2FB3DF1BDF01B800BE4982 /* Yolo.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2FB3C31BDF01B800BE4982 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Yicheng/Boran;
+				TargetAttributes = {
+					EC2FB3CA1BDF01B800BE4982 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = E7FPD3YNFW;
+					};
+					EC2FB3DE1BDF01B800BE4982 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = E7FPD3YNFW;
+						TestTargetID = EC2FB3CA1BDF01B800BE4982;
+					};
+				};
+			};
+			buildConfigurationList = EC2FB3C61BDF01B800BE4982 /* Build configuration list for PBXProject "Yolo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC2FB3C21BDF01B800BE4982;
+			productRefGroup = EC2FB3CC1BDF01B800BE4982 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2FB3CA1BDF01B800BE4982 /* Yolo */,
+				EC2FB3DE1BDF01B800BE4982 /* YoloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2FB3C91BDF01B800BE4982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2FB3D91BDF01B800BE4982 /* LaunchScreen.storyboard in Resources */,
+				EC2FB3D61BDF01B800BE4982 /* Assets.xcassets in Resources */,
+				EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */,
+				ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2FB3DD1BDF01B800BE4982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC8F36EE95D273370465137 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		39296255D5054CF294C74D78 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2FB3C71BDF01B800BE4982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
+				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
+				ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */,
+				ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */,
+				ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */,
+				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
+				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
+				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
+				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,
+				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
+				ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */,
+				ECBD88B01BE4CEB4003925BA /* menuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2FB3DB1BDF01B800BE4982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2FB3E41BDF01B800BE4982 /* HnagOutWithMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC2FB3E11BDF01B800BE4982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC2FB3CA1BDF01B800BE4982 /* Yolo */;
+			targetProxy = EC2FB3E01BDF01B800BE4982 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC2FB3D21BDF01B800BE4982 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2FB3D31BDF01B800BE4982 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC2FB3D71BDF01B800BE4982 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2FB3D81BDF01B800BE4982 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC2FB3E61BDF01B800BE4982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC2FB3E71BDF01B800BE4982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2FB3E91BDF01B800BE4982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F321D9E22FECB15CA46C90CD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
+				PRODUCT_NAME = Yolo;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		EC2FB3EA1BDF01B800BE4982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
+				PRODUCT_NAME = Yolo;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		EC2FB3EC1BDF01B800BE4982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HnagOutWithMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMeTests";
+				PRODUCT_NAME = Yolo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yolo.app/Yolo";
+			};
+			name = Debug;
+		};
+		EC2FB3ED1BDF01B800BE4982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HnagOutWithMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMeTests";
+				PRODUCT_NAME = Yolo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yolo.app/Yolo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2FB3C61BDF01B800BE4982 /* Build configuration list for PBXProject "Yolo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2FB3E61BDF01B800BE4982 /* Debug */,
+				EC2FB3E71BDF01B800BE4982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2FB3E81BDF01B800BE4982 /* Build configuration list for PBXNativeTarget "Yolo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2FB3E91BDF01B800BE4982 /* Debug */,
+				EC2FB3EA1BDF01B800BE4982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2FB3EB1BDF01B800BE4982 /* Build configuration list for PBXNativeTarget "YoloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2FB3EC1BDF01B800BE4982 /* Debug */,
+				EC2FB3ED1BDF01B800BE4982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC2FB3C31BDF01B800BE4982 /* Project object */;
+}

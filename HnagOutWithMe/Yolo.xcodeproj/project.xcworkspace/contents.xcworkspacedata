@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HnagOutWithMe.xcodeproj">
+      location = "self:/Users/OrangeChickens/Desktop/TeamHangOut/HnagOutWithMe/HnagOutWithMe.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--User Main Page View Controller-->
+        <scene sceneID="Par-2u-LEG">
+            <objects>
+                <viewController storyboardIdentifier="userMainView" id="fqg-fU-fPK" customClass="userMainPageViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2IR-Lm-cXF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Whh-3E-KGr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zsa-on-5Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nu-P2-QNs">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="log out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="fqg-fU-fPK" eventType="touchUpInside" id="x7g-LA-YtI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Nu-P2-QNs" firstAttribute="centerX" secondItem="Zsa-on-5Sg" secondAttribute="centerX" id="Uc0-YN-akK"/>
+                            <constraint firstItem="0Nu-P2-QNs" firstAttribute="centerY" secondItem="Zsa-on-5Sg" secondAttribute="centerY" id="vNY-nw-29u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eET-9C-eO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="238"/>
+        </scene>
+    </scenes>
+</document>
