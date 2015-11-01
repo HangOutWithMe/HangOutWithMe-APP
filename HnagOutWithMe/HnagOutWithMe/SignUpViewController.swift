@@ -94,7 +94,7 @@ class SignUpViewController: UIViewController {
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
 
-        
+
         // Present the controller
         self.presentViewController(alertController, animated: true, completion: nil)
     }
