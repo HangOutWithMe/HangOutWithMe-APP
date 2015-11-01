@@ -51,7 +51,7 @@ class menuViewController: AirbnbViewController {
     
     func viewControllerForIndexPath(indexPath: NSIndexPath) -> UIViewController {
         let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("userMainView") as! userMainPageViewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView") as! mainPageTabBarController
         let controller: UINavigationController = UINavigationController(rootViewController: viewController)
         
         switch indexPath.row {
