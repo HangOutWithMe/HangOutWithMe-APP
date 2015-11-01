@@ -87,8 +87,6 @@ class SignUpViewController: UIViewController {
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             logInPage.modalTransitionStyle = .FlipHorizontal
             self.presentViewController(logInPage, animated: true, completion: nil)
-
-            
             self.view.endEditing(true)
 
         }

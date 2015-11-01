@@ -33,7 +33,6 @@ class userMainPageViewController: UIViewController {
         self.airViewController.showAirViewFromViewController(self.navigationController, complete: nil)
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
