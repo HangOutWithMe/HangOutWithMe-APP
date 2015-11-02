@@ -145,6 +145,7 @@
                                 <animations/>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="6Fv-CP-Kmi" id="vH9-oG-SIL"/>
                             <outlet property="delegate" destination="6Fv-CP-Kmi" id="YaG-lW-tR9"/>
@@ -161,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="2000" y="1233"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Contacts View Controller-->
         <scene sceneID="hsz-gz-K5T">
             <objects>
-                <viewController storyboardIdentifier="addFriends" id="jpq-ja-HuH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addFriends" id="jpq-ja-HuH" customClass="AddContactsViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Djo-EY-LXq"/>
                         <viewControllerLayoutGuide type="bottom" id="T15-LM-gyC"/>
@@ -172,9 +173,25 @@
                     <view key="view" contentMode="scaleToFill" id="KER-7b-Pi7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFX-5e-1FM">
+                                <rect key="frame" x="0.0" y="39" width="600" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iFX-5e-1FM" firstAttribute="top" secondItem="Djo-EY-LXq" secondAttribute="bottom" constant="19" id="5XU-uw-emu"/>
+                            <constraint firstAttribute="trailing" secondItem="iFX-5e-1FM" secondAttribute="trailing" id="CxG-Ok-f1n"/>
+                            <constraint firstItem="iFX-5e-1FM" firstAttribute="leading" secondItem="KER-7b-Pi7" secondAttribute="leading" id="tu5-yR-lxA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SearchBar" destination="iFX-5e-1FM" id="3Ly-2Y-xe4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdM-LJ-Fax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

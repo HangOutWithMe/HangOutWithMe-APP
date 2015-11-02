@@ -15,6 +15,7 @@
 		D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */; };
 		D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */; };
 		D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */; };
+		D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */; };
 		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
 		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
 		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
@@ -65,6 +66,7 @@
 		D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
 		D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */,
 				D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */,
 				D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */,
+				D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */,
 			);
 			name = UserMainPage;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */,
 				D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
+				D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */,
 				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
 				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,

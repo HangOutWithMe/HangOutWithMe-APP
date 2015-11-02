@@ -10,7 +10,7 @@ import UIKit
 
 class ContactTableViewController: UITableViewController {
     
-    let exampleContacts = ["Annie", "Jinx", "Lucian", "Draven", "Darius", "Vi", "Riven", "Xin Zhao", "Sion", "Jarvan", "Ryze"]
+    let exampleContacts = ["Annie", "Jinx", "Lucian", "Draven", "Darius", "Vi", "Riven", "Xin Zhao", "Sion", "Jarvan", "Ryze", "Xerath"]
 
     var sectionsToCharacterKeys: [Character]!
     
@@ -52,6 +52,7 @@ class ContactTableViewController: UITableViewController {
     func addFunc() {
         let addPage = (self.storyboard?.instantiateViewControllerWithIdentifier("addFriends"))! as UIViewController
         self.navigationController?.pushViewController(addPage, animated: true)
+        addPage.navigationItem.title = "Add Contacts"
     }
     
     override func didReceiveMemoryWarning() {

@@ -75,7 +75,7 @@ class SignUpViewController: UIViewController {
     */
     @IBAction func cancelToLogInPage(sender: AnyObject) {
         let alertController = UIAlertController(title: "Exit?", message: "", preferredStyle: .Alert)
-        var cancelAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) {
+        let cancelAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) {
             UIAlertAction in
             NSLog("Cancel Pressed")
 
