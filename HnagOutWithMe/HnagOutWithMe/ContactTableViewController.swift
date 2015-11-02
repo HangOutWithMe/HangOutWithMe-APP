@@ -9,11 +9,35 @@
 import UIKit
 
 class ContactTableViewController: UITableViewController {
+    
+    let exampleContacts = ["Annie", "Jinx", "Lucian", "Draven", "Darius", "Vi", "Riven", "Xin Zhao", "Sion", "Jarvan", "Ryze"]
+
+    var sectionsToCharacterKeys: [Character]!
+    
+    var contactsDirectory: [Character: [String]]!
+    
+    func processContacts(contacts: [String]) -> [Character: [String]] {
+        var directory = [Character: [String]]()
+        for contact in contacts {
+            let character = contact[contact.startIndex]
+            
+            if directory[character] == nil {
+                directory[character] = [String]()
+            }
+            
+            directory[character]?.append(contact)
+        }
+        
+        return directory
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        contactsDirectory = processContacts(exampleContacts)
+        sectionsToCharacterKeys = Array(contactsDirectory.keys).sort()
         self.tableView.reloadData()
+        
     }
     
     
@@ -39,23 +63,38 @@ class ContactTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return contactsDirectory.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let characterKey = sectionsToCharacterKeys[section]
+        
+        if let count = contactsDirectory[characterKey]?.count {
+            return count
+        } else {
+            return 0
+        }
+
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell")
+        cell?.textLabel?.text = String(sectionsToCharacterKeys[section])
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("RowCell", forIndexPath: indexPath)
+        
+        let characterKey = sectionsToCharacterKeys[indexPath.section]
+        let contactValue = contactsDirectory[characterKey]?[indexPath.row]
+        
+        cell.textLabel?.text = contactValue
+        
+        return cell
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
