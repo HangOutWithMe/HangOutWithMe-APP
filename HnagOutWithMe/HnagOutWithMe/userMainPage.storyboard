@@ -174,23 +174,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFX-5e-1FM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFX-5e-1FM">
                                 <rect key="frame" x="0.0" y="39" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-bz-Czv">
+                                <rect key="frame" x="0.0" y="289" width="600" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iFX-5e-1FM" firstAttribute="top" secondItem="Djo-EY-LXq" secondAttribute="bottom" constant="19" id="5XU-uw-emu"/>
                             <constraint firstAttribute="trailing" secondItem="iFX-5e-1FM" secondAttribute="trailing" id="CxG-Ok-f1n"/>
+                            <constraint firstItem="T15-LM-gyC" firstAttribute="top" secondItem="hMD-bz-Czv" secondAttribute="bottom" constant="290" id="Vh4-DJ-nKj"/>
+                            <constraint firstItem="hMD-bz-Czv" firstAttribute="centerX" secondItem="iFX-5e-1FM" secondAttribute="centerX" id="Vp2-Ny-GpT"/>
+                            <constraint firstItem="hMD-bz-Czv" firstAttribute="centerY" secondItem="KER-7b-Pi7" secondAttribute="centerY" id="hsk-JY-h5k"/>
                             <constraint firstItem="iFX-5e-1FM" firstAttribute="leading" secondItem="KER-7b-Pi7" secondAttribute="leading" id="tu5-yR-lxA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Instruction" destination="hMD-bz-Czv" id="j4E-TT-lZm"/>
                         <outlet property="SearchBar" destination="iFX-5e-1FM" id="3Ly-2Y-xe4"/>
+                        <outlet property="instruction" destination="hMD-bz-Czv" id="MV3-Yg-4SS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdM-LJ-Fax" userLabel="First Responder" sceneMemberID="firstResponder"/>

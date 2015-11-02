@@ -12,6 +12,8 @@ class AddContactsViewController: UIViewController {
 
     @IBOutlet var SearchBar: UITextField!
     
+    @IBOutlet var Instruction: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageViewSearchBar = UIImageView()
@@ -22,6 +24,7 @@ class AddContactsViewController: UIViewController {
         SearchBar.leftView = imageViewSearchBar
         SearchBar.leftViewMode = UITextFieldViewMode.Always
 
+        Instruction.text = "Search your friend using their UserID or Email"
         // Do any additional setup after loading the view.
     }
 
