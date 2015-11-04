@@ -157,6 +157,7 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
     public var thumbnailImages: [Dictionary<Int, UIImage>]?
     public var viewControllers: [Dictionary<Int, UIViewController>]?
     public var heightAirMenuRow: CGFloat?
+    public var vcToReturn: UIViewController?
  
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -691,7 +692,7 @@ public class AirbnbViewController: UIViewController, AirbnbMenuDelegate, AirbnbM
         if let willShow: () = self.delegate?.willShowAirViewController?() {
             willShow
         }
-        
+        vcToReturn = controller
         self.airImageView?.image = self.imageWithView(controller!.view)
         self.saveThumbnailImage(self.airImageView?.image, atIndexPath: self.currentIndexPath)
         self.saveViewControler(controller, atIndexPath: self.currentIndexPath)

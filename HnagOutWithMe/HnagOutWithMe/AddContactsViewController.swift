@@ -23,6 +23,7 @@ class AddContactsViewController: UIViewController {
         view.addSubview(imageViewSearchBar)
         SearchBar.leftView = imageViewSearchBar
         SearchBar.leftViewMode = UITextFieldViewMode.Always
+        SearchBar.becomeFirstResponder()
 
         Instruction.text = "Search your friend using their UserID or Email"
         // Do any additional setup after loading the view.

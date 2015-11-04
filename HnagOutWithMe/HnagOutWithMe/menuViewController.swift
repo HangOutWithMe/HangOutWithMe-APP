@@ -17,7 +17,6 @@ class menuViewController: AirbnbViewController {
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         self.view.addSubview(imageView)
-        
 
         // Do any additional setup after loading the view.
     }
@@ -50,17 +49,28 @@ class menuViewController: AirbnbViewController {
     }
     
     func viewControllerForIndexPath(indexPath: NSIndexPath) -> UIViewController {
-        let storyboard = UIStoryboard(name: "userMainPage", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView") as! mainPageTabBarController
-        let controller: UINavigationController = UINavigationController(rootViewController: viewController)
-        
+        let userMainPageSB = UIStoryboard(name: "userMainPage", bundle: nil)
+       // let usermainPageVC = userMainPageSB.instantiateViewControllerWithIdentifier("tabBarView") as! mainPageTabBarController
+        var controller = self.vcToReturn as! UINavigationController
         switch indexPath.row {
-        case 0:break
+        case 0:
            // viewController.view.backgroundColor = UIColor(red:0.13, green:0.14, blue:0.15, alpha:0)
-        case 1: break
+            let settingSB = UIStoryboard(name: "userSetting", bundle: nil)
+            let viewController = settingSB.instantiateViewControllerWithIdentifier("setting")
+            controller = UINavigationController(rootViewController: viewController)
+            break
+        case 1:
            // viewController.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:0)
-        case 2: break
+            let settingSB = UIStoryboard(name: "userSetting", bundle: nil)
+            let viewController = settingSB.instantiateViewControllerWithIdentifier("setting")
+            controller = UINavigationController(rootViewController: viewController)
+            break
+        case 2:
            // viewController.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:0)
+            let settingSB = UIStoryboard(name: "userSetting", bundle: nil)
+            let viewController = settingSB.instantiateViewControllerWithIdentifier("setting")
+            controller.pushViewController(viewController, animated: true)
+            break
         default:
             break
         }

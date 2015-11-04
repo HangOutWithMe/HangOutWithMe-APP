@@ -60,7 +60,7 @@
         <!--Notifications-->
         <scene sceneID="I8P-uh-Q1s">
             <objects>
-                <tableViewController id="KjY-xe-2K8" customClass="NotificationsTableViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Notifications" id="KjY-xe-2K8" customClass="NotificationsTableViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BBh-ah-gpf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
         <!--Contacts-->
         <scene sceneID="JSd-S8-7UV">
             <objects>
-                <tableViewController id="6Fv-CP-Kmi" customClass="ContactTableViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Contacts" id="6Fv-CP-Kmi" customClass="ContactTableViewController" customModule="Yolo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="POx-Te-bw8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

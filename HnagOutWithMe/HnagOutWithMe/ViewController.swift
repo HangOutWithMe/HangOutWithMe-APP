@@ -238,10 +238,10 @@ class ViewController: UIViewController {
             {   self.updateUserInfoToParse()
                 //self.performSegueWithIdentifier("Fool", sender: self)
 
-                
+                self.presentMainPageView()
+
             }
             // if log in successful, transit to main view.
-           self.presentMainPageView()
             
             
 
@@ -300,7 +300,7 @@ class ViewController: UIViewController {
         let contentPage = storyboard.instantiateViewControllerWithIdentifier("tabBarView") as! mainPageTabBarController
         let navigationController = UINavigationController(rootViewController: contentPage)
         let menuController: menuViewController = menuViewController(viewController: navigationController, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.presentViewController(menuController, animated: false, completion: nil)
 
     }

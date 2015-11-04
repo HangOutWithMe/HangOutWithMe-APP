@@ -9,7 +9,7 @@
 import UIKit
 
 class mainPageTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.grayColor()
@@ -21,12 +21,15 @@ class mainPageTabBarController: UITabBarController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         self.airSwipeHandler = {() -> Void in
-            self.airViewController.showAirViewFromViewController(self.navigationController, complete: nil)
+            self.airViewController.showAirViewFromViewController(self.navigationController,  complete: nil)
             return
         }
 
         // Do any additional setup after loading the view.
     }
+//    func getController() -> mainPageTabBarController{
+//        return self
+//    }
     
     func leftButtonTouch() {
         self.airViewController.showAirViewFromViewController(self.navigationController, complete: nil)

@@ -16,6 +16,8 @@
 		D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */; };
 		D1BEC95D1BE607770081DDE3 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */; };
 		D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */; };
+		D1BEC9611BE8B6070081DDE3 /* userSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BEC9601BE8B6070081DDE3 /* userSetting.storyboard */; };
+		D1BEC9641BE8B8320081DDE3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9631BE8B8320081DDE3 /* SettingTableViewController.swift */; };
 		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
 		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
 		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
@@ -67,6 +69,8 @@
 		D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
 		D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
+		D1BEC9601BE8B6070081DDE3 /* userSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = userSetting.storyboard; sourceTree = "<group>"; };
+		D1BEC9631BE8B8320081DDE3 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,26 @@
 			name = UserMainPage;
 			sourceTree = "<group>";
 		};
+		D1BEC9621BE8B6220081DDE3 /* SettingPage */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
+				D1BEC9601BE8B6070081DDE3 /* userSetting.storyboard */,
+				D1BEC9631BE8B8320081DDE3 /* SettingTableViewController.swift */,
+			);
+			name = SettingPage;
+			sourceTree = "<group>";
+		};
+		D1BEC9651BE959470081DDE3 /* LogInPage */ = {
+			isa = PBXGroup;
+			children = (
+				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
+				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
+				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
+			);
+			name = LogInPage;
+			sourceTree = "<group>";
+		};
 		EC2FB3C21BDF01B800BE4982 = {
 			isa = PBXGroup;
 			children = (
@@ -201,14 +225,12 @@
 				D1BEC94B1BE5EAEB0081DDE3 /* UserMainPage */,
 				EC2FB3CE1BDF01B800BE4982 /* AppDelegate.swift */,
 				D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */,
-				ECBD88AF1BE4CEB4003925BA /* menuViewController.swift */,
-				EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */,
+				D1BEC9621BE8B6220081DDE3 /* SettingPage */,
+				D1BEC9651BE959470081DDE3 /* LogInPage */,
 				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
 				D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */,
 				D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */,
 				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
-				EC2FB3D01BDF01B800BE4982 /* ViewController.swift */,
-				EC2FB3D21BDF01B800BE4982 /* Main.storyboard */,
 				EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */,
 				EC2FB3D71BDF01B800BE4982 /* LaunchScreen.storyboard */,
 				EC2FB4761BDF872900BE4982 /* libsqlite3.dylib */,
@@ -301,7 +323,7 @@
 				TargetAttributes = {
 					EC2FB3CA1BDF01B800BE4982 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = E7FPD3YNFW;
+						DevelopmentTeam = 54CC38NA48;
 					};
 					EC2FB3DE1BDF01B800BE4982 = {
 						CreatedOnToolsVersion = 7.0;
@@ -337,6 +359,7 @@
 				EC2FB3D91BDF01B800BE4982 /* LaunchScreen.storyboard in Resources */,
 				EC2FB3D61BDF01B800BE4982 /* Assets.xcassets in Resources */,
 				EC2FB3D41BDF01B800BE4982 /* Main.storyboard in Resources */,
+				D1BEC9611BE8B6070081DDE3 /* userSetting.storyboard in Resources */,
 				ECBD88AC1BE4C31D003925BA /* userMainPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +421,7 @@
 				D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */,
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
 				D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */,
+				D1BEC9641BE8B8320081DDE3 /* SettingTableViewController.swift in Sources */,
 				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
 				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,
@@ -544,7 +568,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
+				PRODUCT_BUNDLE_IDENTIFIER = "Boran-Yicheng.HnagOutWithMe";
 				PRODUCT_NAME = Yolo;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
@@ -565,7 +589,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HnagOutWithMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Yicheng-Boran.HnagOutWithMe";
+				PRODUCT_BUNDLE_IDENTIFIER = "Boran-Yicheng.HnagOutWithMe";
 				PRODUCT_NAME = Yolo;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/KKevinLL/Desktop/Hangout/HnagOutWithMe/HnagOutWithMe/HangOutWithMe-Bridging-Header.h";
