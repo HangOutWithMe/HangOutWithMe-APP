@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
-		D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */; };
-		D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */; };
 		D1BEC94D1BE5FD9B0081DDE3 /* mainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */; };
 		D1BEC9571BE607420081DDE3 /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */; };
 		D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */; };
@@ -18,6 +15,9 @@
 		D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */; };
 		D1BEC9611BE8B6070081DDE3 /* userSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BEC9601BE8B6070081DDE3 /* userSetting.storyboard */; };
 		D1BEC9641BE8B8320081DDE3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9631BE8B8320081DDE3 /* SettingTableViewController.swift */; };
+		D1BEC9671BF6FDA60081DDE3 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9661BF6FDA60081DDE3 /* UserHeaderCell.swift */; };
+		D1BEC9681BF70B820081DDE3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D00B4DA02712B3822682FD0 /* libPods.a */; };
+		D1BEC96A1BF711560081DDE3 /* UserEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BEC9691BF711560081DDE3 /* UserEventsCell.swift */; };
 		EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */; };
 		EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */; };
 		EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E6B181BE09F8E0082A5B8 /* SignUpViewController.swift */; };
@@ -61,8 +61,6 @@
 /* Begin PBXFileReference section */
 		3D00B4DA02712B3822682FD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		416BC207D50C3168E6E9A8A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewController.swift; sourceTree = "<group>"; };
-		D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleTableViewCell.swift; sourceTree = "<group>"; };
 		D1BEC94C1BE5FD9B0081DDE3 /* mainPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageTabBarController.swift; sourceTree = "<group>"; };
 		D1BEC9561BE607420081DDE3 /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
 		D1BEC9581BE6074E0081DDE3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +69,8 @@
 		D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
 		D1BEC9601BE8B6070081DDE3 /* userSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = userSetting.storyboard; sourceTree = "<group>"; };
 		D1BEC9631BE8B8320081DDE3 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		D1BEC9661BF6FDA60081DDE3 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
+		D1BEC9691BF711560081DDE3 /* UserEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEventsCell.swift; sourceTree = "<group>"; };
 		D1F6B9901BE5DF8D0036165F /* HangOutWithMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HangOutWithMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolTableTableViewController.swift; sourceTree = "<group>"; };
 		EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BEC9681BF70B820081DDE3 /* libPods.a in Frameworks */,
 				EC2FB4751BDF872300BE4982 /* libsqlite3.dylib in Frameworks */,
 				EC2FB4711BDF86B500BE4982 /* libz.1.dylib in Frameworks */,
 				EC2FB4131BDF5DB300BE4982 /* StoreKit.framework in Frameworks */,
@@ -129,7 +130,6 @@
 				EC2FB4051BDF5D6F00BE4982 /* CFNetwork.framework in Frameworks */,
 				EC2FB4021BDF5D6500BE4982 /* Accounts.framework in Frameworks */,
 				EC2FB4031BDF5D6500BE4982 /* AudioToolbox.framework in Frameworks */,
-				A25ED2FFC5BCC3980892FBB4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +174,8 @@
 				D1BEC95A1BE6076C0081DDE3 /* ContactTableViewController.swift */,
 				D1BEC95C1BE607770081DDE3 /* MeTableViewController.swift */,
 				D1BEC95E1BE80B390081DDE3 /* AddContactsViewController.swift */,
+				D1BEC9661BF6FDA60081DDE3 /* UserHeaderCell.swift */,
+				D1BEC9691BF711560081DDE3 /* UserEventsCell.swift */,
 			);
 			name = UserMainPage;
 			sourceTree = "<group>";
@@ -228,8 +230,6 @@
 				D1BEC9621BE8B6220081DDE3 /* SettingPage */,
 				D1BEC9651BE959470081DDE3 /* LogInPage */,
 				EC1E6B161BE095BF0082A5B8 /* ExitViewController.swift */,
-				D112E6911BE0BB73006661DE /* FriendCircleTableViewController.swift */,
-				D112E6931BE0C3F4006661DE /* FriendCircleTableViewCell.swift */,
 				EC1E6B141BE090F80082A5B8 /* FoolTableTableViewController.swift */,
 				EC2FB3D51BDF01B800BE4982 /* Assets.xcassets */,
 				EC2FB3D71BDF01B800BE4982 /* LaunchScreen.storyboard */,
@@ -284,6 +284,7 @@
 				EC2FB3C81BDF01B800BE4982 /* Frameworks */,
 				EC2FB3C91BDF01B800BE4982 /* Resources */,
 				39296255D5054CF294C74D78 /* Copy Pods Resources */,
+				0AE5C5C2DA6C7B457CAB6B46 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +375,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0AE5C5C2DA6C7B457CAB6B46 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1BC8F36EE95D273370465137 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +430,7 @@
 				EC1E6B171BE095BF0082A5B8 /* ExitViewController.swift in Sources */,
 				EC1E6B151BE090F80082A5B8 /* FoolTableTableViewController.swift in Sources */,
 				D1BEC9591BE6074E0081DDE3 /* NotificationsTableViewController.swift in Sources */,
+				D1BEC96A1BF711560081DDE3 /* UserEventsCell.swift in Sources */,
 				ECBD88941BE4C00A003925BA /* AirbnbViewController.swift in Sources */,
 				ECBD88931BE4C00A003925BA /* AirbnbSessionView.swift in Sources */,
 				ECBD88AE1BE4C418003925BA /* userMainPageViewController.swift in Sources */,
@@ -422,9 +439,8 @@
 				EC2FB3D11BDF01B800BE4982 /* ViewController.swift in Sources */,
 				D1BEC95F1BE80B390081DDE3 /* AddContactsViewController.swift in Sources */,
 				D1BEC9641BE8B8320081DDE3 /* SettingTableViewController.swift in Sources */,
-				D112E6921BE0BB73006661DE /* FriendCircleTableViewController.swift in Sources */,
+				D1BEC9671BF6FDA60081DDE3 /* UserHeaderCell.swift in Sources */,
 				EC2FB3CF1BDF01B800BE4982 /* AppDelegate.swift in Sources */,
-				D112E6941BE0C3F4006661DE /* FriendCircleTableViewCell.swift in Sources */,
 				D1BEC95B1BE6076C0081DDE3 /* ContactTableViewController.swift in Sources */,
 				EC1E6B191BE09F8E0082A5B8 /* SignUpViewController.swift in Sources */,
 				ECBD88921BE4C00A003925BA /* AirbnbHelper.m in Sources */,

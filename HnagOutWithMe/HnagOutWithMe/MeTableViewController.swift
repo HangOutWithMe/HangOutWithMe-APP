@@ -10,6 +10,9 @@ import UIKit
 
 class MeTableViewController: UITableViewController {
     
+    var header: PFObject?
+    var events = ["coffee", "movie", "lunch", "gun"]
+    
     @IBAction func Logout(sender: AnyObject) {
         PFUser.logOutInBackgroundWithBlock{(error: NSError?) -> Void in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -21,7 +24,13 @@ class MeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = false
+        self.tabBarController?.navigationItem.title = "Me"
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action:"refreshFunc")
+        self.tabBarController?.navigationItem.rightBarButtonItem = refreshButton
 
+        refreshFromParse()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,17 +39,27 @@ class MeTableViewController: UITableViewController {
     }
     
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.navigationController?.navigationBarHidden = false
-        self.tabBarController?.navigationItem.title = "Me"
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action:"refreshFunc")
-        self.tabBarController?.navigationItem.rightBarButtonItem = refreshButton
-    }
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.navigationController?.navigationBarHidden = false
+//        self.tabBarController?.navigationItem.title = "Me"
+//        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action:"refreshFunc")
+//        self.tabBarController?.navigationItem.rightBarButtonItem = refreshButton
+//    }
 
     func refreshFunc() {
       let vc = (self.storyboard?.instantiateViewControllerWithIdentifier("testing"))! as UIViewController
       self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    func refreshFromParse() {
+
+        let currentUser = PFUser.currentUser()
+        if let currUser = currentUser {
+                self.header = currUser
+                self.tableView.reloadData()
+            }
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,23 +71,33 @@ class MeTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if(section == 0){
+            return 1
+        }else {
+            return events.count
+        }
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        tableView.estimatedRowHeight = 400
+        tableView.rowHeight = UITableViewAutomaticDimension
+        if(indexPath.section == 0){
+            let cell = tableView.dequeueReusableCellWithIdentifier("userHeaderCell", forIndexPath: indexPath) as! UserHeaderCell
+            cell.header = self.header
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("userEventsCell", forIndexPath: indexPath) as! UserEventsCell
+            return cell
+        }
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
