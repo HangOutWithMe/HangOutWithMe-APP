@@ -31,6 +31,7 @@ class MeTableViewController: UITableViewController {
         self.tabBarController?.navigationItem.rightBarButtonItem = refreshButton
 
         refreshFromParse()
+        self.tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

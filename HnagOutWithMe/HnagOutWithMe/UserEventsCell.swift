@@ -10,6 +10,17 @@ import UIKit
 
 class UserEventsCell: UITableViewCell {
 
+    @IBOutlet var event: UILabel!
+    var singleEvent: PFObject? {
+        didSet {
+            if let setEvent = singleEvent {
+                event.text = "event name here"
+
+                
+            }
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
